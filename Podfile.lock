@@ -40,7 +40,7 @@ DEPENDENCIES:
   - XCGLogger
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Kingfisher
     - Nimble
     - ObjcExceptionBridging
@@ -66,4 +66,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 922e69cdf97b69db9640d54a71d1e54d5c151c1f
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
