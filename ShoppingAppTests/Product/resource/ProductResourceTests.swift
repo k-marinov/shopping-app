@@ -11,6 +11,9 @@ class ProductResourceTests: XCTestCase {
         let product: ProductResource = ProductResource(json: json)
 
         XCTAssertEqual(product.id, 0)
+        XCTAssertEqual(product.title, "")
+        XCTAssertEqual(product.imageUrl, "")
+        XCTAssertEqual(product.priceNowFormatted(), "")
     }
 
     func testInitialize_WhenHasValidProductJson_returnsMappedValues() {

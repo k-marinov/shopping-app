@@ -9,6 +9,9 @@ struct PriceResource: Resource {
     }
 
     func priceNowFormatted() -> String {
+        if StringUtil.isNilOrEmpty(now) {
+            return ""
+        }
         return "£\(now)"
     }
 
