@@ -33,7 +33,7 @@ end
 
 # after pod install, override default configs for schemes or targets specified
 debug_schemes = ['Debug']
-swift_4_pods = ['RxCocoa','RxSwift','RxSwiftExt','XCGLogger']
+swift_4_pods = ['RxCocoa','RxSwift','RxSwiftExt']
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|
