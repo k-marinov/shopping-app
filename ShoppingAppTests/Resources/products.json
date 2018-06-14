@@ -1,0 +1,44 @@
+{
+    "products":[
+                {
+                "productId":"3215462",
+                "title":"Bosch SMS25AW00G Freestanding Dishwasher, White",
+                "price":{
+                "was":"",
+                "then1":"",
+                "then2":"",
+                "now":"349.00",
+                "uom":"",
+                "currency":"GBP"
+                },
+                "image":"//johnlewis.scene7.com/is/image/JohnLewis/236888507?"
+                },
+                {
+                "productId":"1955287",
+                "title":"Bosch SMV40C30GB Fully Integrated Dishwasher",
+                "price":{
+                "was":"",
+                "then1":"",
+                "then2":"",
+                "now":"359.00",
+                "uom":"",
+                "currency":"GBP"
+                },
+                "image":"//johnlewis.scene7.com/is/image/JohnLewis/234378764?",
+                },
+                {
+                "productId":"1997493",
+                "type":"product",
+                "title":"Beko DFS05010W Freestanding Slimline Dishwasher, White",
+                "price":{
+                "was":"",
+                "then1":"",
+                "then2":"",
+                "now":"188.99",
+                "uom":"",
+                "currency":"GBP"
+                },
+                "image":"//johnlewis.scene7.com/is/image/JohnLewis/234357349?",
+                }
+                ]
+}
