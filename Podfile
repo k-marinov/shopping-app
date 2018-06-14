@@ -9,7 +9,6 @@ inhibit_all_warnings!
 pod 'SwiftLint'
 
 def common_pods
-  pod 'XCGLogger'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SwiftyJSON'
