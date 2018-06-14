@@ -10,9 +10,16 @@ class ProductsTests: XCTestCase {
         XCTAssertEqual(resource.products.count, 0)
     }
 
-    func testInitialize_WhenHasValidJsonData_returnsTwoProducts() {
-        let resource: ProductsResource = ProductsResource(data: Data())
-        XCTAssertEqual(resource.products.count, 2)
+    func testInitialize_WhenHasValidJsonData_returnsThreeProducts() {
+        let data: Data = ProductMother.createProductsJsonData()
+        let resource: ProductsResource = ProductsResource(data: data)
+        XCTAssertEqual(resource.products.count, 3)
+    }
+
+    func testInitialize_WhenHasEmptyProductsJsonData_returnsEmptyList() {
+        let data: Data = ProductMother.createEmptyProductsJsonData()
+        let resource: ProductsResource = ProductsResource(data: data)
+        XCTAssertEqual(resource.products.count, 0)
     }
 
 }
