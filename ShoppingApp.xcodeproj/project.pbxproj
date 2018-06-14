@@ -112,9 +112,7 @@
 				B6CC060120D2F06800254F87 /* AppDelegate.swift */,
 				B6CC060320D2F06800254F87 /* ViewController.swift */,
 				B6CC060520D2F06800254F87 /* Main.storyboard */,
-				B6CC060820D2F06800254F87 /* Assets.xcassets */,
-				B6CC060A20D2F06800254F87 /* LaunchScreen.storyboard */,
-				B6CC060D20D2F06800254F87 /* Info.plist */,
+				B6E0567420D2F69B00613D05 /* SupportFiles */,
 			);
 			path = ShoppingApp;
 			sourceTree = "<group>";
@@ -126,6 +124,16 @@
 				B6CC061820D2F06900254F87 /* Info.plist */,
 			);
 			path = ShoppingAppTests;
+			sourceTree = "<group>";
+		};
+		B6E0567420D2F69B00613D05 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B6CC060820D2F06800254F87 /* Assets.xcassets */,
+				B6CC060A20D2F06800254F87 /* LaunchScreen.storyboard */,
+				B6CC060D20D2F06800254F87 /* Info.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +148,7 @@
 				B6CC05FB20D2F06800254F87 /* Frameworks */,
 				B6CC05FC20D2F06800254F87 /* Resources */,
 				A8BCA2739F27708995CE52E1 /* [CP] Embed Pods Frameworks */,
+				B6E0567320D2F60E00613D05 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -308,6 +317,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B6E0567320D2F60E00613D05 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config \"$SRCROOT/.swiftlint.yml\"\necho \"swift lint run\"";
 		};
 		F200DC2FA17ED622B63AAC57 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -499,7 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BDD95TS3QC;
-				INFOPLIST_FILE = ShoppingApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShoppingApp/SupportFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -520,7 +543,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BDD95TS3QC;
-				INFOPLIST_FILE = ShoppingApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShoppingApp/SupportFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
