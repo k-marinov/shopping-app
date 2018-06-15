@@ -1,12 +1,12 @@
 import Foundation
 import SwiftyJSON
 
-struct ProductsResource: RootResource {
+struct ProductsResource: Resource {
 
     private(set) var products: [ProductResource] = [ProductResource]()
 
-    init(data: Data) {
-         map(from: JSON(data))
+    init(json: JSON) {
+         map(from: json)
     }
 
     private mutating func map(from json: JSON) {

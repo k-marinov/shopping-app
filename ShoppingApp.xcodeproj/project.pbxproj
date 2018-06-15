@@ -11,7 +11,6 @@
 		978BF6AE59CE162FCBDCA3DF /* Pods_ShoppingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2A5D0633B942D174B78BC5 /* Pods_ShoppingAppTests.framework */; };
 		B6085A7020D2FC6900BABA4F /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085A6F20D2FC6900BABA4F /* Resource.swift */; };
 		B6085A7320D2FD5800BABA4F /* ProductsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085A7220D2FD5800BABA4F /* ProductsResource.swift */; };
-		B6085A7620D2FDE800BABA4F /* RootResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085A7520D2FDE800BABA4F /* RootResource.swift */; };
 		B6085A7920D300E900BABA4F /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085A7820D300E900BABA4F /* FileHelper.swift */; };
 		B6085A7C20D3015400BABA4F /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = B6085A7B20D3015400BABA4F /* products.json */; };
 		B6085A7F20D305FC00BABA4F /* ProductMother.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085A7E20D305FC00BABA4F /* ProductMother.swift */; };
@@ -48,7 +47,6 @@
 		AD3579066DC766E78E98DEDC /* Pods_ShoppingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6085A6F20D2FC6900BABA4F /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		B6085A7220D2FD5800BABA4F /* ProductsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsResource.swift; sourceTree = "<group>"; };
-		B6085A7520D2FDE800BABA4F /* RootResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResource.swift; sourceTree = "<group>"; };
 		B6085A7820D300E900BABA4F /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		B6085A7B20D3015400BABA4F /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		B6085A7E20D305FC00BABA4F /* ProductMother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMother.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				B6085A6F20D2FC6900BABA4F /* Resource.swift */,
-				B6085A7520D2FDE800BABA4F /* RootResource.swift */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -508,7 +505,6 @@
 				B6085A8D20D3189F00BABA4F /* StringUtil.swift in Sources */,
 				B6085A8620D315D900BABA4F /* PriceResource.swift in Sources */,
 				B6CC060420D2F06800254F87 /* ViewController.swift in Sources */,
-				B6085A7620D2FDE800BABA4F /* RootResource.swift in Sources */,
 				B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */,
 				B6E0568020D2FB9B00613D05 /* ProductResource.swift in Sources */,
 				B6085A7320D2FD5800BABA4F /* ProductsResource.swift in Sources */,
