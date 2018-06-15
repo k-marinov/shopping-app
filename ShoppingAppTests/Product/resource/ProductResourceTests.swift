@@ -13,6 +13,7 @@ class ProductResourceTests: XCTestCase {
         XCTAssertEqual(product.id, 0)
         XCTAssertEqual(product.title, "")
         XCTAssertEqual(product.imageUrl, "")
+        XCTAssertEqual(product.code, "")
         XCTAssertEqual(product.priceNowFormatted(), "")
     }
 
@@ -24,6 +25,7 @@ class ProductResourceTests: XCTestCase {
         XCTAssertEqual(product.title, "Bosch SMS25AW00G Freestanding Dishwasher, White")
         XCTAssertEqual(product.imageUrl, "https://johnlewis.scene7.com/is/image/JohnLewis/236888507?")
         XCTAssertEqual(product.displaySpecialOffer, "buy 1 free get 1 free")
+        XCTAssertEqual(product.code, "81701107")
         XCTAssertEqual(product.priceNowFormatted(), "£349.00")
     }
 

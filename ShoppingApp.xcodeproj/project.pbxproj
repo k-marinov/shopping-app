@@ -28,6 +28,7 @@
 		B6085A9B20D454E500BABA4F /* ProductAdditionalServicesResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085A9A20D454E500BABA4F /* ProductAdditionalServicesResource.swift */; };
 		B6085A9D20D4551000BABA4F /* ProductAdditionalServicesResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085A9C20D4551000BABA4F /* ProductAdditionalServicesResourceTests.swift */; };
 		B6085A9F20D4560C00BABA4F /* ProductAdditionalServicesMother.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085A9E20D4560C00BABA4F /* ProductAdditionalServicesMother.swift */; };
+		B6085AA120D4646B00BABA4F /* ProductFeatureMother.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AA020D4646B00BABA4F /* ProductFeatureMother.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ViewController.swift */; };
 		B6CC060720D2F06800254F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		B6085A9A20D454E500BABA4F /* ProductAdditionalServicesResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAdditionalServicesResource.swift; sourceTree = "<group>"; };
 		B6085A9C20D4551000BABA4F /* ProductAdditionalServicesResourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAdditionalServicesResourceTests.swift; sourceTree = "<group>"; };
 		B6085A9E20D4560C00BABA4F /* ProductAdditionalServicesMother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAdditionalServicesMother.swift; sourceTree = "<group>"; };
+		B6085AA020D4646B00BABA4F /* ProductFeatureMother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFeatureMother.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				B6085A8920D3184200BABA4F /* PriceMother.swift */,
 				B6085A9420D44E8800BABA4F /* ProductDetailsMother.swift */,
 				B6085A9E20D4560C00BABA4F /* ProductAdditionalServicesMother.swift */,
+				B6085AA020D4646B00BABA4F /* ProductFeatureMother.swift */,
 			);
 			path = Mothers;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				B6085A7F20D305FC00BABA4F /* ProductMother.swift in Sources */,
 				B6085A8F20D448BD00BABA4F /* ProductDetailsResourceTests.swift in Sources */,
 				B6085A9520D44E8800BABA4F /* ProductDetailsMother.swift in Sources */,
+				B6085AA120D4646B00BABA4F /* ProductFeatureMother.swift in Sources */,
 				B6085A7920D300E900BABA4F /* FileHelper.swift in Sources */,
 				B6085A9F20D4560C00BABA4F /* ProductAdditionalServicesMother.swift in Sources */,
 			);

@@ -19,7 +19,7 @@ class ProductAdditionalServiceResourceTests: XCTestCase {
         XCTAssertEqual(resource.includedServicesFormatted(), "2 year guarantee included, 1 month free service")
     }
 
-    func testIncludedServicesFormatted_whenEmptyStringServices_returnsEmpty() {
+    func testIncludedServicesFormatted_whenHasServicesAsEmptyString_returnsEmpty() {
         let json: JSON = ProductAdditionalServicesMother.additionalServicesEmptyStringsJson()
         let resource = ProductAdditionalServicesResource(json: json)
 

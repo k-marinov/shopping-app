@@ -6,6 +6,7 @@ struct ProductResource: Resource {
     private(set) var title: String
     private(set) var imageUrl: String = ""
     private(set) var displaySpecialOffer: String
+    private(set) var code: String
     private let priceResource: PriceResource
 
     init(json: JSON) {
@@ -13,6 +14,7 @@ struct ProductResource: Resource {
         title = json["title"].stringValue
         priceResource = PriceResource(json: json["price"])
         displaySpecialOffer = json["displaySpecialOffer"].stringValue
+        code = json["code"].stringValue
         imageUrl = addSchemeToImageUrlIfRequired(to: json["image"].stringValue)
     }
 
