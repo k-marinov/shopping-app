@@ -6,21 +6,21 @@ import SwiftyJSON
 
 class PriceResourceTests: XCTestCase {
 
-    func testPriceNowFormatted_WhenHasEmptyJsonData_returnsEmptyStringValue() {
+    func testPriceNowFormatted_whenHasEmptyJsonData_returnsEmptyStringValue() {
         let json: JSON = PriceMother.emptyJson()
         let price: PriceResource = PriceResource(json: json)
 
         XCTAssertEqual(price.priceNowFormatted(), "")
     }
 
-    func testPriceNowFormatted_WhenHasEmptyNowValue_returnsEmptyStringValue() {
+    func testPriceNowFormatted_whenHasEmptyNowValue_returnsEmptyStringValue() {
         let json: JSON = PriceMother.priceWithNowValueEmpty()
         let price: PriceResource = PriceResource(json: json)
 
         XCTAssertEqual(price.priceNowFormatted(), "")
     }
 
-    func testPriceNowFormatted_WhenHasEmptyNowValue_returnsFormattedValue() {
+    func testPriceNowFormatted_whenHasEmptyNowValue_returnsFormattedValue() {
         let json: JSON = PriceMother.priceWithNowValue()
         let price: PriceResource = PriceResource(json: json)
 

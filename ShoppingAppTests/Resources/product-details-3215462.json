@@ -1,0 +1,247 @@
+{
+    "productInformation":"<p>Reliable and versatile, the Freestanding Dishwasher from Bosch</p>",
+    "features":[
+                {
+                "groupName":"",
+                "attributes":[
+                              {
+                              "id":"attr10139380714",
+                              "name":"Salt Level Indicator",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380715",
+                              "name":"Dimensions",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"H84.5cm x W60cm x D60cm"
+                              },
+                              {
+                              "id":"attr10139380716",
+                              "name":"Type",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"Freestanding"
+                              },
+                              {
+                              "id":"attr10139380717",
+                              "name":"Wash performance",
+                              "toolTip":"Graded on performance A - G, with A being the highest grade. The higher the grade the more energy efficient the appliance.",
+                              "uom":"",
+                              "value":"A"
+                              },
+                              {
+                              "id":"attr10139380718",
+                              "name":"Manufacturer Part Number (MPN)",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"SMS25AW00G"
+                              },
+                              {
+                              "id":"attr10139380719",
+                              "name":"Noise Level",
+                              "toolTip":"How noisy, in decibels, the machine is. The lower the dB, the quieter the appliance",
+                              "uom":"",
+                              "value":"48dB"
+                              },
+                              {
+                              "id":"attr10139380720",
+                              "name":"Model name / number",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"SMS25AW00G Freestanding Dishwasher"
+                              },
+                              {
+                              "id":"attr10139380721",
+                              "name":"Rinse Aid Indicator",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380724",
+                              "name":"Water Consumption Per Standard Cycle",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"9.5L"
+                              },
+                              {
+                              "id":"attr10139380725",
+                              "name":"Time remaining indicator",
+                              "toolTip":"Tells you how long the programme's got to go",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380726",
+                              "name":"Energy Consumption Per Standard Cycle",
+                              "toolTip":"Based on the drying cycle of the standard cotton programme at full load. Actual energy consumption per cycle will depend on how the appliance is used.",
+                              "uom":"",
+                              "value":"0.92kWh/cycle"
+                              },
+                              {
+                              "id":"attr10139380728",
+                              "name":"Adjustable racking",
+                              "toolTip":"Lets you move the racking around to fit large or awkward items",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380729",
+                              "name":"Digital display",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380730",
+                              "name":"Delicate Wash",
+                              "toolTip":"This wash cycle provides a gentle wash for delicate items",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380731",
+                              "name":"Program Sequence Indicator",
+                              "toolTip":"Tells you the progress of your washing/drying cycle",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380732",
+                              "name":"Child lock",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380733",
+                              "name":"Cutlery Holder",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"Basket"
+                              },
+                              {
+                              "id":"attr10139380734",
+                              "name":"Delay Start",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"Yes"
+                              },
+                              {
+                              "id":"attr10139380735",
+                              "name":"Estimated Annual Energy Consumption",
+                              "toolTip":"How much electricity the item would use over a year",
+                              "uom":"",
+                              "value":"262kWh"
+                              },
+                              {
+                              "id":"attr10139380737",
+                              "name":"Place Settings",
+                              "toolTip":"A complete set of items provided for one person at a meal  ",
+                              "uom":"",
+                              "value":"12"
+                              },
+                              {
+                              "id":"attr10139380738",
+                              "name":"Dishwasher Size",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"Full"
+                              },
+                              {
+                              "id":"attr10139380739",
+                              "name":"Energy Rating ",
+                              "toolTip":"Graded on performance, from A+++ to G, with A+++ being the highest rating. Higher ratings mean better energy efficiency",
+                              "uom":"",
+                              "value":"A++"
+                              },
+                              {
+                              "id":"attr10139380740",
+                              "name":"Brand",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"Bosch"
+                              },
+                              {
+                              "id":"attr10139380742",
+                              "name":"Overflow protection",
+                              "toolTip":"An anti-flood device prevents the machine from being damaged by flooding from the inlet pipe",
+                              "uom":"",
+                              "value":"NO"
+                              },
+                              {
+                              "id":"attr10139380744",
+                              "name":"Drying performance",
+                              "toolTip":"Graded on performance A - G, with A being the highest grade",
+                              "uom":"",
+                              "value":"A"
+                              },
+                              {
+                              "id":"attr10139380745",
+                              "name":"Automatic Load Adjustment",
+                              "toolTip":"Automatically adjusts water level for a smaller load, thus saving time and money",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380746",
+                              "name":"Quick wash",
+                              "toolTip":"Speedy programme when you need items cleaned quickly",
+                              "uom":"",
+                              "value":"YES"
+                              },
+                              {
+                              "id":"attr10139380747",
+                              "name":"Drying System",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"Heat Exchanger"
+                              },
+                              {
+                              "id":"attr10139380748",
+                              "name":"Number of Programs/Settings",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"5"
+                              },
+                              {
+                              "id":"attr10139380749",
+                              "name":"Estimated Annual Water Consumption",
+                              "toolTip":"The amount of water used in litres per year, based on 220 standard washing cycles for cotton programs at 60°C and 40°C at full and partial load. Actual water consumption will depend on how the appliance is used.",
+                              "uom":"",
+                              "value":"2660L/year"
+                              },
+                              {
+                              "id":"attr10139380750",
+                              "name":"Quiet Mark",
+                              "toolTip":"",
+                              "uom":"",
+                              "value":"NO"
+                              }
+                              ]
+                }
+                ],
+    "careGuide":[
+
+    ],
+    "featuredArticles":[
+
+    ],
+    "editorsNotes":"",
+    "buyingGuides":[
+                    {
+                    "title":"Dishwashers Buying Guide",
+                    "image":"//johnlewis.scene7.com/is/image/JohnLewis/electrical_med_icon?",
+                    "linkUrl":"https://www.johnlewis.com/buying-guides/dishwashers-buying-guide",
+                    "linkText":"Dishwashers Buying Guide",
+                    "longDescription":"Wave farewell to the washing up with your new friend in the kitchen"
+                    }
+                    ],
+    "sizeGuides":[
+
+    ],
+    "weLikeItBecause":""
+}

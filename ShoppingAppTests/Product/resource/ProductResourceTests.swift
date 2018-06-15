@@ -6,7 +6,7 @@ import SwiftyJSON
 
 class ProductResourceTests: XCTestCase {
 
-    func testInitialize_WhenHasEmptyJsonData_returnsEmptyValues() {
+    func testInitialize_whenHasEmptyJsonData_returnsEmptyValues() {
         let json: JSON = ProductMother.emptyProductJson()
         let product: ProductResource = ProductResource(json: json)
 
@@ -16,7 +16,7 @@ class ProductResourceTests: XCTestCase {
         XCTAssertEqual(product.priceNowFormatted(), "")
     }
 
-    func testInitialize_WhenHasValidProductJson_returnsMappedValues() {
+    func testInitialize_whenHasValidProductJson_returnsMappedValues() {
         let json: JSON = ProductMother.product3215462Json()
         let product: ProductResource = ProductResource(json: json)
 
@@ -26,14 +26,14 @@ class ProductResourceTests: XCTestCase {
         XCTAssertEqual(product.priceNowFormatted(), "£349.00")
     }
 
-    func testImageUrl_WhenHasImageUrlWithHttpScheme_doesNotAddHttpsPrefix() {
+    func testImageUrl_whenHasImageUrlWithHttpScheme_doesNotAddHttpsPrefix() {
         let json: JSON = ProductMother.productImageUrlWithHttpScheme()
         let product: ProductResource = ProductResource(json: json)
 
         XCTAssertEqual(product.imageUrl, "http://johnlewis.com/image/1")
     }
 
-    func testImageUrl_WhenHasImageUrlWithHttpsScheme_doesNotAddHttpsPrefix() {
+    func testImageUrl_whenHasImageUrlWithHttpsScheme_doesNotAddHttpsPrefix() {
         let json: JSON = ProductMother.productImageUrlWithHttpsScheme()
         let product: ProductResource = ProductResource(json: json)
 
