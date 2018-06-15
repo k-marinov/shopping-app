@@ -10,6 +10,7 @@ class ProductDetailsResourceTests: XCTestCase {
         let resource: ProductDetailsResource = ProductDetailsResource(json: JSON(Data()))
 
         XCTAssertEqual(resource.information, "")
+        XCTAssertTrue(resource.features.isEmpty)
     }
 
     func testInitialize_whenHasValidJsonData_returnsMappedValues() {
@@ -18,7 +19,11 @@ class ProductDetailsResourceTests: XCTestCase {
         let expectedInformation: String = ProductDetailsMother().productInformation3215462
 
         XCTAssertEqual(resource.information, expectedInformation)
+        XCTAssertEqual(resource.features.count, 4)
+        XCTAssertEqual(resource.features[0].attributeName, "Salt Level Indicator")
+        XCTAssertEqual(resource.features[0].attributeValue, "YES")
+        XCTAssertEqual(resource.features[3].attributeName, "Wash performance")
+        XCTAssertEqual(resource.features[3].attributeValue, "A")
     }
-    
 
 }
