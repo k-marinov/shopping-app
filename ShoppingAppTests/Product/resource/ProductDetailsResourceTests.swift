@@ -19,6 +19,6 @@ class ProductDetailsResourceTests: XCTestCase {
 
         XCTAssertEqual(resource.information, expectedInformation)
     }
-
+    
 
 }
