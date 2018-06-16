@@ -4,9 +4,16 @@ import SwiftyJSON
 struct ApiResponse {
 
     private(set) var resource: Resource?
+    private(set) var httpStatusCode: HttpStatusCode!
+    private var successHttpStatusCode: HttpStatusCode!
 
-    init<RESOURCE: Resource>(resourceType: RESOURCE.Type, httpResponse: HttpResponse) {
-        resource = createResource(resourceType: resourceType, data: httpResponse.data)
+    init<RESOURCE: Resource>(
+        resourceType: RESOURCE.Type,
+        httpResponse: HttpResponse,
+        successHttpStatusCode: HttpStatusCode) {
+        self.resource = createResource(resourceType: resourceType, data: httpResponse.data)
+        self.httpStatusCode = httpResponse.statusCode()
+        self.successHttpStatusCode = successHttpStatusCode
     }
 
     private func createResource<RESOURCE: Resource>(resourceType: RESOURCE.Type, data: Data?) -> Resource? {
@@ -21,6 +28,27 @@ struct ApiResponse {
             return true
         }
         return false
+    }
+
+    func isSuccess() -> Bool {
+        return successHttpStatusCode == httpStatusCode
+    }
+
+    func apiFailError() -> ApiError {
+        if hasClientError() {
+            return ApiError.client
+        } else if hasServerError() {
+            return ApiError.server
+        }
+        return ApiError.unknown
+    }
+
+    private func hasClientError() -> Bool {
+        return HttpStatusCode.clientErrorsGroup.contains(httpStatusCode.rawValue)
+    }
+
+    private func hasServerError() -> Bool {
+        return HttpStatusCode.serverErrorsGroup.contains(httpStatusCode.rawValue)
     }
 
 }

@@ -49,6 +49,8 @@
 		B6085ACC20D5116100BABA4F /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ACB20D5116100BABA4F /* ApiResponse.swift */; };
 		B6085ACE20D512B100BABA4F /* HttpResponseMother.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ACD20D512B100BABA4F /* HttpResponseMother.swift */; };
 		B6085AD020D5171D00BABA4F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ACF20D5171D00BABA4F /* ApiError.swift */; };
+		B6085AD320D5185300BABA4F /* ApiResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AD220D5185300BABA4F /* ApiResponseTests.swift */; };
+		B6085AD520D518CC00BABA4F /* HttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AD420D518CC00BABA4F /* HttpStatusCode.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ViewController.swift */; };
 		B6CC060720D2F06800254F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* Main.storyboard */; };
@@ -113,6 +115,8 @@
 		B6085ACB20D5116100BABA4F /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		B6085ACD20D512B100BABA4F /* HttpResponseMother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseMother.swift; sourceTree = "<group>"; };
 		B6085ACF20D5171D00BABA4F /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		B6085AD220D5185300BABA4F /* ApiResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseTests.swift; sourceTree = "<group>"; };
+		B6085AD420D518CC00BABA4F /* HttpStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpStatusCode.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		B6085AAE20D4F46900BABA4F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B6085AD120D5184600BABA4F /* model */,
 				B6085AB520D4F85400BABA4F /* util */,
 				B6085AB220D4F53600BABA4F /* protocol */,
 			);
@@ -283,11 +288,20 @@
 		B6085AC020D5012F00BABA4F /* model */ = {
 			isa = PBXGroup;
 			children = (
+				B6085AD420D518CC00BABA4F /* HttpStatusCode.swift */,
 				B6085AC120D5014200BABA4F /* HttpMethod.swift */,
 				B6085AC320D5055100BABA4F /* ApiRequestError.swift */,
 				B6085AC920D510D400BABA4F /* HttpResponse.swift */,
 				B6085ACB20D5116100BABA4F /* ApiResponse.swift */,
 				B6085ACF20D5171D00BABA4F /* ApiError.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		B6085AD120D5184600BABA4F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B6085AD220D5185300BABA4F /* ApiResponseTests.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -659,6 +673,7 @@
 				B6085A9120D44C8000BABA4F /* ProductDetailsResource.swift in Sources */,
 				B6085AD020D5171D00BABA4F /* ApiError.swift in Sources */,
 				B6085AA520D4663400BABA4F /* ProductFeatureResource.swift in Sources */,
+				B6085AD520D518CC00BABA4F /* HttpStatusCode.swift in Sources */,
 				B6085AC420D5055100BABA4F /* ApiRequestError.swift in Sources */,
 				B6085ABF20D4FFD200BABA4F /* ApiRequest.swift in Sources */,
 				B6085ACC20D5116100BABA4F /* ApiResponse.swift in Sources */,
@@ -682,6 +697,7 @@
 				B6085AC620D5064800BABA4F /* MockProductsRequest.swift in Sources */,
 				B6085A8F20D448BD00BABA4F /* ProductDetailsResourceTests.swift in Sources */,
 				B6085A9520D44E8800BABA4F /* ProductDetailsMother.swift in Sources */,
+				B6085AD320D5185300BABA4F /* ApiResponseTests.swift in Sources */,
 				B6085AC820D50B1200BABA4F /* ApiRequestTests.swift in Sources */,
 				B6085AA120D4646B00BABA4F /* ProductFeatureMother.swift in Sources */,
 				B6085A7920D300E900BABA4F /* FileHelper.swift in Sources */,

@@ -30,4 +30,25 @@ class ProductsRequestTests: XCTestCase {
         XCTAssertNil(response.resource)
     }
 
+    func testIsSuccess_whenHttpResponseCodeIsEqualToSuccessCode_returnsTrue() {
+        let httpResponse: HttpResponse = HttpResponseMother.createEmptyHttpResponse(withStatusCode: 200)
+        let response: ApiResponse = ProductsRequest().response(from: httpResponse)
+
+        XCTAssertTrue(response.isSuccess())
+    }
+
+    func testIsSuccess_whenHasStatusCode200_returnsTrue() {
+        let httpResponse: HttpResponse = HttpResponseMother.createEmptyHttpResponse(withStatusCode: 200)
+        let response: ApiResponse = ProductsRequest().response(from: httpResponse)
+
+        XCTAssertTrue(response.isSuccess())
+    }
+
+    func testIsSuccess_whenHasStatusCode401_returnsTrue() {
+        let httpResponse: HttpResponse = HttpResponseMother.createEmptyHttpResponse(withStatusCode: 401)
+        let response: ApiResponse = ProductsRequest().response(from: httpResponse)
+
+        XCTAssertFalse(response.isSuccess())
+    }
+
 }

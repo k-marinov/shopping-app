@@ -11,7 +11,10 @@ class ProductsRequest: ApiRequest {
     }
 
     func response(from newResponse: HttpResponse) -> ApiResponse {
-        return ApiResponse(resourceType: ProductsResource.self, httpResponse: newResponse)
+        return ApiResponse(
+            resourceType: ProductsResource.self,
+            httpResponse: newResponse,
+            successHttpStatusCode: HttpStatusCode.ok)
     }
 
 }
