@@ -12,7 +12,7 @@ class ProductResourceTests: XCTestCase {
 
         XCTAssertEqual(product.id, 0)
         XCTAssertEqual(product.title, "")
-        XCTAssertEqual(product.imageUrl, "")
+        XCTAssertNil(product.imageUrl)
         XCTAssertEqual(product.code, "")
         XCTAssertEqual(product.priceNowFormatted(), "")
     }
