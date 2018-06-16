@@ -12,4 +12,41 @@
     "image":"//johnlewis.scene7.com/is/image/JohnLewis/236888507?",
     "displaySpecialOffer": "buy 1 free get 1 free",
     "code": "81701107",
+    "details": {
+        "productInformation": "<p>Reliable and versatile, the Freestanding Dishwasher from Bosch</p>",
+        "features":[
+                    {
+                    "groupName":"",
+                    "attributes":[
+                                  {
+                                  "name":"Salt Level Indicator",
+                                  "value":"YES"
+                                  },
+                                  {
+                                  "name":"Dimensions",
+                                  "value":"H84.5cm x W60cm x D60cm"
+                                  },
+                                  {
+                                  "name":"Type",
+                                  "value":"Freestanding"
+                                  },
+                                  {
+                                  "name":"Wash performance",
+                                  "value":"A"
+                                  }
+                                  ]
+                    }
+                    ]
+    },
+    "additionalServices": {
+        "includedServices": [ "2 year guarantee included", "1 month free service" ]
+    },
+    "media": { "images":
+        { "urls": [
+           "//johnlewis.scene7.com/is/image/JohnLewis/236888507?",
+           "//johnlewis.scene7.com/is/image/JohnLewis/236888507alt1?",
+           "//johnlewis.scene7.com/is/image/JohnLewis/236888507alt10?",
+           "//johnlewis.scene7.com/is/image/JohnLewis/236888507alt2?"
+           ] }
+    }
 }
