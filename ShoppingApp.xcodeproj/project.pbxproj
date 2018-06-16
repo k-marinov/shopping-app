@@ -288,12 +288,11 @@
 		B6085AC020D5012F00BABA4F /* model */ = {
 			isa = PBXGroup;
 			children = (
+				B6085AD620D52C6500BABA4F /* error */,
 				B6085AD420D518CC00BABA4F /* HttpStatusCode.swift */,
 				B6085AC120D5014200BABA4F /* HttpMethod.swift */,
-				B6085AC320D5055100BABA4F /* ApiRequestError.swift */,
 				B6085AC920D510D400BABA4F /* HttpResponse.swift */,
 				B6085ACB20D5116100BABA4F /* ApiResponse.swift */,
-				B6085ACF20D5171D00BABA4F /* ApiError.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -304,6 +303,15 @@
 				B6085AD220D5185300BABA4F /* ApiResponseTests.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		B6085AD620D52C6500BABA4F /* error */ = {
+			isa = PBXGroup;
+			children = (
+				B6085ACF20D5171D00BABA4F /* ApiError.swift */,
+				B6085AC320D5055100BABA4F /* ApiRequestError.swift */,
+			);
+			path = error;
 			sourceTree = "<group>";
 		};
 		B6CC05F520D2F06800254F87 = {

@@ -1,8 +1,11 @@
 import XCTest
+import RxSwift
 
 @testable import ShoppingApp
 
 class ApiRequestTests: XCTestCase {
+
+    private let disposeBag: DisposeBag = DisposeBag()
 
     func testAsURLRequest_whenHasInvalidUrl_throwsApiRequestError() {
         let request: MockProductsRequest = MockProductsRequest(url: "ahrotro:***>$$£$%$5", method: HttpMethod.get)
@@ -24,6 +27,67 @@ class ApiRequestTests: XCTestCase {
         XCTAssertEqual(httpMethod, "GET")
         XCTAssertEqual(cachePolicy, URLRequest.CachePolicy.reloadIgnoringLocalCacheData)
         XCTAssertEqual(timeoutInterval, 30)
+    }
+
+    func testResponse_whenHasHttpResponseError_returnsApiErrorNetwork() {
+        var apiError: ApiError?
+        let expect = expectation(description: "response")
+        let request: MockProductsRequest = MockProductsRequest(url: "http://johnlewis.com/product/1", method: HttpMethod.get)
+        let response: HttpResponse = HttpResponseMother.emptyHttpResponse(withStatusCode: -1)
+
+        request.response(from: response)
+            .subscribe(onError: { error in
+                apiError = error as? ApiError
+                expect.fulfill()
+            }, onCompleted: {
+                expect.fulfill()
+            }).disposed(by: disposeBag)
+
+        wait(for: [expect], timeout: 5.0)
+
+        XCTAssertEqual(apiError, ApiError.network)
+    }
+
+    func testResponse_whenHasHttpResponseWithStatusCode400_returnsClientError() {
+        var apiError: ApiError?
+        let expect = expectation(description: "response")
+        let request: MockProductsRequest = MockProductsRequest(url: "http://johnlewis.com/product/1", method: HttpMethod.get)
+        let response: HttpResponse = HttpResponseMother.httpResponse(withStatusCode: 400)
+
+        request.response(from: response)
+            .subscribe(onError: { error in
+                apiError = error as? ApiError
+                expect.fulfill()
+            }, onCompleted: {
+                expect.fulfill()
+            }).disposed(by: disposeBag)
+
+        wait(for: [expect], timeout: 5.0)
+
+        XCTAssertEqual(apiError, ApiError.client)
+    }
+
+    func testResponse_whenHasHttpResponseWithValidData_returnsApiResponse() {
+        var apiError: ApiError?
+        var apiResponse: ApiResponse?
+        let expect = expectation(description: "response")
+        let request: MockProductsRequest = MockProductsRequest(url: "http://johnlewis.com/products", method: HttpMethod.get)
+        let response: HttpResponse = HttpResponseMother.httpResponse(withStatusCode: 200)
+
+        request.response(from: response)
+            .subscribe(onNext: { response in
+                apiResponse = response
+                expect.fulfill()
+            }, onError: { error in
+                apiError = error as? ApiError
+                expect.fulfill()
+            }).disposed(by: disposeBag)
+
+        wait(for: [expect], timeout: 5.0)
+
+        XCTAssertNil(apiError)
+        XCTAssertNotNil(apiResponse)
+        XCTAssertNotNil(apiResponse?.resource is ProductsResource)
     }
 
 }

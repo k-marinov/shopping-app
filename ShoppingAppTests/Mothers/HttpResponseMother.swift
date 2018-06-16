@@ -10,8 +10,8 @@ class HttpResponseMother {
             statusCode: statusCode,
             httpVersion: "1.0",
             headerFields: nil)
-        let value: Data = "{}".data(using: String.Encoding.utf8)!
-        return HttpResponse(response: response, data: value, error: NSError(domain: "", code: 0, userInfo: nil))
+        let value: Data = "{ }".data(using: String.Encoding.utf8)!
+        return HttpResponse(response: response, data: value, error: nil)
     }
 
     class func emptyHttpResponse(withStatusCode statusCode: Int) -> HttpResponse {
@@ -21,7 +21,7 @@ class HttpResponseMother {
             httpVersion: "1.0",
             headerFields: nil)
         let value: Data = "".data(using: String.Encoding.utf8)!
-        return HttpResponse(response: response, data: value, error: NSError(domain: "", code: 0, userInfo: nil))
+        return HttpResponse(response: response, data: value, error: NSError(domain: "network error", code: -1, userInfo: nil))
     }
 
 }
