@@ -31,38 +31,36 @@ class ApiRequestTests: XCTestCase {
 
     func testResponse_whenHasHttpResponseError_returnsApiErrorNetwork() {
         var apiError: ApiError?
-        let expect = expectation(description: "response")
         let request: MockProductsRequest = MockProductsRequest(url: "http://johnlewis.com/product/1", method: HttpMethod.get)
         let response: HttpResponse = HttpResponseMother.emptyHttpResponse(withStatusCode: -1)
 
+        let expectation = self.expectation(description: "")
         request.response(from: response)
             .subscribe(onError: { error in
                 apiError = error as? ApiError
-                expect.fulfill()
+                expectation.fulfill()
             }, onCompleted: {
-                expect.fulfill()
+                expectation.fulfill()
             }).disposed(by: disposeBag)
-
-        wait(for: [expect], timeout: Constants.timeout)
+        wait(for: [expectation], timeout: Constants.timeout)
 
         XCTAssertEqual(apiError, ApiError.network)
     }
 
     func testResponse_whenHasHttpResponseWithStatusCode400_returnsClientError() {
         var apiError: ApiError?
-        let expect = expectation(description: "response")
         let request: MockProductsRequest = MockProductsRequest(url: "http://johnlewis.com/product/1", method: HttpMethod.get)
         let response: HttpResponse = HttpResponseMother.httpResponse(withStatusCode: 400)
 
+        let expectation = self.expectation(description: "")
         request.response(from: response)
             .subscribe(onError: { error in
                 apiError = error as? ApiError
-                expect.fulfill()
+                expectation.fulfill()
             }, onCompleted: {
-                expect.fulfill()
+                expectation.fulfill()
             }).disposed(by: disposeBag)
-
-        wait(for: [expect], timeout: Constants.timeout)
+        wait(for: [expectation], timeout: Constants.timeout)
 
         XCTAssertEqual(apiError, ApiError.client)
     }
@@ -70,20 +68,19 @@ class ApiRequestTests: XCTestCase {
     func testResponse_whenHasHttpResponseWithValidData_returnsApiResponse() {
         var apiError: ApiError?
         var apiResponse: ApiResponse?
-        let expect = expectation(description: "response")
         let request: MockProductsRequest = MockProductsRequest(url: "http://johnlewis.com/products", method: HttpMethod.get)
         let response: HttpResponse = HttpResponseMother.httpResponse(withStatusCode: 200)
 
+        let expectation = self.expectation(description: "")
         request.response(from: response)
             .subscribe(onNext: { response in
                 apiResponse = response
-                expect.fulfill()
+                expectation.fulfill()
             }, onError: { error in
                 apiError = error as? ApiError
-                expect.fulfill()
+                expectation.fulfill()
             }).disposed(by: disposeBag)
-
-        wait(for: [expect], timeout: Constants.timeout)
+        wait(for: [expectation], timeout: Constants.timeout)
 
         XCTAssertNil(apiError)
         XCTAssertNotNil(apiResponse)

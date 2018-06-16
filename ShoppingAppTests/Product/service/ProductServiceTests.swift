@@ -24,15 +24,15 @@ class ProductServiceTests: XCTestCase {
         let request = MockProductsRequest(url: url, method: HttpMethod.get)
         var products: [ProductResource] = [ProductResource]()
 
-        let expect = expectation(description: "find all products success")
+        let expectation = self.expectation(description: "")
         service.findAllProducts(with: request)
             .subscribe(onNext: { newProducts in
                 products.append(contentsOf: newProducts)
-                expect.fulfill()
+                expectation.fulfill()
             }, onError: { error in
-                expect.fulfill()
+                expectation.fulfill()
             }).disposed(by: disposeBag)
-        wait(for: [expect], timeout: Constants.timeout)
+        wait(for: [expectation], timeout: Constants.timeout)
 
         XCTAssertEqual(products.count, 3)
     }
@@ -42,15 +42,15 @@ class ProductServiceTests: XCTestCase {
         let request = MockProductsRequest(url: url, method: HttpMethod.get)
         var apiError: ApiError?
 
-        let expect = expectation(description: "find all products error")
+        let expectation = self.expectation(description: "")
         service.findAllProducts(with: request)
             .subscribe(onNext: { _ in
-                expect.fulfill()
+                expectation.fulfill()
             }, onError: { error in
                 apiError = error as? ApiError
-                expect.fulfill()
+                expectation.fulfill()
             }).disposed(by: disposeBag)
-        wait(for: [expect], timeout: Constants.timeout)
+        wait(for: [expectation], timeout: Constants.timeout)
 
         XCTAssertEqual(apiError, ApiError.client)
     }

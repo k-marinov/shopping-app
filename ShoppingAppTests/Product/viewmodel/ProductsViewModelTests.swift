@@ -14,15 +14,49 @@ class ProductsViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         viewModel = ProductsViewModel(componentCreatable: creator)
+        isLoadingCollector = RxCollector<Bool>().collect(from: viewModel.isLoading.asObservable())
+        reloadDataCollector = RxCollector<Void>().collect(from: viewModel.reloadData.asObservable())
     }
 
     func testLoadProducts_whenProductsAreReturnedWithSuccess_updatesUi() {
-        
+        creator.mockProductService().isRequestSuccess = true
+        resetCollectors()
+
+        let expectation = self.expectation(description: "")
+        viewModel.loadProducts()
+            .subscribe(onError: { error in
+                expectation.fulfill()
+            }, onCompleted: {
+                expectation.fulfill()
+            }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: Constants.timeout)
+
+        XCTAssertFalse(isLoadingCollector.results.isEmpty)
+        XCTAssertEqual(isLoadingCollector.results, [true, false])
+        XCTAssertEqual(reloadDataCollector.results.count, 1)
+    }
+
+    func testLoadProducts_whenProductsNotReturned_updatesUi() {
+        creator.mockProductService().isRequestSuccess = false
+        resetCollectors()
+
+        let expectation = self.expectation(description: "")
+        viewModel.loadProducts()
+            .subscribe(onError: { error in
+                expectation.fulfill()
+            }, onCompleted: {
+                expectation.fulfill()
+            }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: Constants.timeout)
+
+        XCTAssertFalse(isLoadingCollector.results.isEmpty)
+        XCTAssertEqual(isLoadingCollector.results, [true, false])
+        XCTAssertEqual(reloadDataCollector.results.count, 0)
     }
 
     private func resetCollectors() {
-        isLoadingCollector = RxCollector<Bool>().collect(from: viewModel.isLoading.asObservable())
-        reloadDataCollector = RxCollector<Void>().collect(from: viewModel.reloadData.asObservable())
+        isLoadingCollector.removeAll()
+        reloadDataCollector.removeAll()
     }
 
 }
