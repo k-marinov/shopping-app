@@ -51,6 +51,15 @@
 		B6085AD020D5171D00BABA4F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ACF20D5171D00BABA4F /* ApiError.swift */; };
 		B6085AD320D5185300BABA4F /* ApiResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AD220D5185300BABA4F /* ApiResponseTests.swift */; };
 		B6085AD520D518CC00BABA4F /* HttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AD420D518CC00BABA4F /* HttpStatusCode.swift */; };
+		B6085AD820D5395000BABA4F /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AD720D5395000BABA4F /* HttpClient.swift */; };
+		B6085ADA20D539BC00BABA4F /* ComponentCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AD920D539BC00BABA4F /* ComponentCreatable.swift */; };
+		B6085ADD20D539CE00BABA4F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ADB20D539CE00BABA4F /* Service.swift */; };
+		B6085ADE20D539CE00BABA4F /* ServiceCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ADC20D539CE00BABA4F /* ServiceCreatable.swift */; };
+		B6085AE020D539F300BABA4F /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ADF20D539F300BABA4F /* ApiClient.swift */; };
+		B6085AE220D53A2D00BABA4F /* UtilityCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AE120D53A2D00BABA4F /* UtilityCreatable.swift */; };
+		B6085AE420D53A3D00BABA4F /* RemoteCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AE320D53A3D00BABA4F /* RemoteCreatable.swift */; };
+		B6085AE620D53A5D00BABA4F /* ProductRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AE520D53A5D00BABA4F /* ProductRemote.swift */; };
+		B6085AE820D53AB900BABA4F /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AE720D53AB900BABA4F /* ProductService.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ViewController.swift */; };
 		B6CC060720D2F06800254F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* Main.storyboard */; };
@@ -117,6 +126,15 @@
 		B6085ACF20D5171D00BABA4F /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		B6085AD220D5185300BABA4F /* ApiResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseTests.swift; sourceTree = "<group>"; };
 		B6085AD420D518CC00BABA4F /* HttpStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpStatusCode.swift; sourceTree = "<group>"; };
+		B6085AD720D5395000BABA4F /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		B6085AD920D539BC00BABA4F /* ComponentCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentCreatable.swift; sourceTree = "<group>"; };
+		B6085ADB20D539CE00BABA4F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B6085ADC20D539CE00BABA4F /* ServiceCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCreatable.swift; sourceTree = "<group>"; };
+		B6085ADF20D539F300BABA4F /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		B6085AE120D53A2D00BABA4F /* UtilityCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityCreatable.swift; sourceTree = "<group>"; };
+		B6085AE320D53A3D00BABA4F /* RemoteCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCreatable.swift; sourceTree = "<group>"; };
+		B6085AE520D53A5D00BABA4F /* ProductRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemote.swift; sourceTree = "<group>"; };
+		B6085AE720D53AB900BABA4F /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -228,7 +246,14 @@
 		B6085A8B20D3188900BABA4F /* util */ = {
 			isa = PBXGroup;
 			children = (
+				B6085AE120D53A2D00BABA4F /* UtilityCreatable.swift */,
+				B6085ADF20D539F300BABA4F /* ApiClient.swift */,
+				B6085ADB20D539CE00BABA4F /* Service.swift */,
+				B6085ADC20D539CE00BABA4F /* ServiceCreatable.swift */,
+				B6085AD920D539BC00BABA4F /* ComponentCreatable.swift */,
+				B6085AE320D53A3D00BABA4F /* RemoteCreatable.swift */,
 				B6085A8C20D3189F00BABA4F /* StringUtil.swift */,
+				B6085AD720D5395000BABA4F /* HttpClient.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -409,6 +434,7 @@
 		B6E0567820D2FA1100613D05 /* remote */ = {
 			isa = PBXGroup;
 			children = (
+				B6085AE520D53A5D00BABA4F /* ProductRemote.swift */,
 			);
 			path = remote;
 			sourceTree = "<group>";
@@ -416,6 +442,7 @@
 		B6E0567920D2FA1600613D05 /* service */ = {
 			isa = PBXGroup;
 			children = (
+				B6085AE720D53AB900BABA4F /* ProductService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -668,18 +695,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6085A8D20D3189F00BABA4F /* StringUtil.swift in Sources */,
+				B6085ADD20D539CE00BABA4F /* Service.swift in Sources */,
 				B6085ABA20D4FD8C00BABA4F /* ProductsRequest.swift in Sources */,
 				B6085A8620D315D900BABA4F /* PriceResource.swift in Sources */,
+				B6085AE220D53A2D00BABA4F /* UtilityCreatable.swift in Sources */,
 				B6085AAD20D4EECF00BABA4F /* HttpSchemeBuilder.swift in Sources */,
+				B6085AD820D5395000BABA4F /* HttpClient.swift in Sources */,
 				B6CC060420D2F06800254F87 /* ViewController.swift in Sources */,
 				B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */,
 				B6085AA720D470D000BABA4F /* ProductMediaResource.swift in Sources */,
+				B6085AE020D539F300BABA4F /* ApiClient.swift in Sources */,
 				B6085AC220D5014200BABA4F /* HttpMethod.swift in Sources */,
 				B6E0568020D2FB9B00613D05 /* ProductResource.swift in Sources */,
+				B6085AE820D53AB900BABA4F /* ProductService.swift in Sources */,
 				B6085A7320D2FD5800BABA4F /* ProductsResource.swift in Sources */,
 				B6085A9B20D454E500BABA4F /* ProductAdditionalServicesResource.swift in Sources */,
+				B6085ADE20D539CE00BABA4F /* ServiceCreatable.swift in Sources */,
+				B6085AE420D53A3D00BABA4F /* RemoteCreatable.swift in Sources */,
 				B6085A9120D44C8000BABA4F /* ProductDetailsResource.swift in Sources */,
 				B6085AD020D5171D00BABA4F /* ApiError.swift in Sources */,
+				B6085AE620D53A5D00BABA4F /* ProductRemote.swift in Sources */,
 				B6085AA520D4663400BABA4F /* ProductFeatureResource.swift in Sources */,
 				B6085AD520D518CC00BABA4F /* HttpStatusCode.swift in Sources */,
 				B6085AC420D5055100BABA4F /* ApiRequestError.swift in Sources */,
@@ -687,6 +722,7 @@
 				B6085ACC20D5116100BABA4F /* ApiResponse.swift in Sources */,
 				B6085ACA20D510D400BABA4F /* HttpResponse.swift in Sources */,
 				B6085A7020D2FC6900BABA4F /* Resource.swift in Sources */,
+				B6085ADA20D539BC00BABA4F /* ComponentCreatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
