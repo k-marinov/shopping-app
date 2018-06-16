@@ -5,6 +5,10 @@ import SwiftyJSON
 
 class ProductMother {
 
+    class func createProducts() -> ProductsResource {
+        return ProductsResource(json: JSON(productsJsonData()))
+    }
+
     class func productsJsonData() -> Data {
         return FileHelper().createData(fromFilename: "products", ofType: "json")!
     }

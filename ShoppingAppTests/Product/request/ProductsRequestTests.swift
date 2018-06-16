@@ -1,6 +1,4 @@
 import XCTest
-import Foundation
-import SwiftyJSON
 
 @testable import ShoppingApp
 
