@@ -10,7 +10,8 @@ struct ProductsResource: Resource {
     }
 
     private mutating func map(from json: JSON) {
-        let newProducts: [ProductResource] = json["products"].arrayValue.compactMap { ProductResource(json: $0) }
+        let newProducts: [ProductResource] = json["products"].arrayValue
+            .compactMap { ProductResource(json: $0) }
         products.append(contentsOf: newProducts)
     }
     

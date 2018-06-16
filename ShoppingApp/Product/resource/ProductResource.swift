@@ -22,16 +22,4 @@ struct ProductResource: Resource, HttpSchemeBuilder {
         return priceResource.priceNowFormatted()
     }
 
-//    private mutating func addSchemeToImageUrlIfRequired(to image: String) -> String {
-//        if StringUtil.isNilOrEmpty(image) {
-//            return ""
-//        }
-//
-//        if image.hasPrefix("https:") || image.hasPrefix("http:") {
-//            return image
-//        }
-//
-//        return "https:" + image
-//    }
-
 }

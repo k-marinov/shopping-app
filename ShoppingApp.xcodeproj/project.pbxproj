@@ -36,12 +36,13 @@
 		B6085AAB20D4ECEE00BABA4F /* ProductMediaResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AAA20D4ECEE00BABA4F /* ProductMediaResourceTests.swift */; };
 		B6085AAD20D4EECF00BABA4F /* HttpSchemeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AAC20D4EECF00BABA4F /* HttpSchemeBuilder.swift */; };
 		B6085AB120D4F4AB00BABA4F /* MockHttpSchemeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AB020D4F4AB00BABA4F /* MockHttpSchemeBuilder.swift */; };
+		B6085AB420D4F54A00BABA4F /* HttpSchemeProtocolSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AB320D4F54A00BABA4F /* HttpSchemeProtocolSpec.swift */; };
+		B6085AB720D4F86100BABA4F /* StringUtilSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AB620D4F86100BABA4F /* StringUtilSpec.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ViewController.swift */; };
 		B6CC060720D2F06800254F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* Main.storyboard */; };
 		B6CC060920D2F06800254F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060820D2F06800254F87 /* Assets.xcassets */; };
 		B6CC060C20D2F06800254F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060A20D2F06800254F87 /* LaunchScreen.storyboard */; };
-		B6CC061720D2F06900254F87 /* ShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC061620D2F06900254F87 /* ShoppingAppTests.swift */; };
 		B6E0567E20D2FAA300613D05 /* ProductsResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0567D20D2FAA300613D05 /* ProductsResourceTests.swift */; };
 		B6E0568020D2FB9B00613D05 /* ProductResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0567F20D2FB9B00613D05 /* ProductResource.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,8 @@
 		B6085AAA20D4ECEE00BABA4F /* ProductMediaResourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMediaResourceTests.swift; sourceTree = "<group>"; };
 		B6085AAC20D4EECF00BABA4F /* HttpSchemeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpSchemeBuilder.swift; sourceTree = "<group>"; };
 		B6085AB020D4F4AB00BABA4F /* MockHttpSchemeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpSchemeBuilder.swift; sourceTree = "<group>"; };
+		B6085AB320D4F54A00BABA4F /* HttpSchemeProtocolSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpSchemeProtocolSpec.swift; sourceTree = "<group>"; };
+		B6085AB620D4F86100BABA4F /* StringUtilSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilSpec.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 		B6CC060B20D2F06800254F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6CC060D20D2F06800254F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6CC061220D2F06900254F87 /* ShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6CC061620D2F06900254F87 /* ShoppingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAppTests.swift; sourceTree = "<group>"; };
 		B6CC061820D2F06900254F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6E0567D20D2FAA300613D05 /* ProductsResourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsResourceTests.swift; sourceTree = "<group>"; };
 		B6E0567F20D2FB9B00613D05 /* ProductResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResource.swift; sourceTree = "<group>"; };
@@ -205,6 +207,8 @@
 		B6085AAE20D4F46900BABA4F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B6085AB520D4F85400BABA4F /* util */,
+				B6085AB220D4F53600BABA4F /* protocol */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -215,6 +219,22 @@
 				B6085AB020D4F4AB00BABA4F /* MockHttpSchemeBuilder.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B6085AB220D4F53600BABA4F /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B6085AB320D4F54A00BABA4F /* HttpSchemeProtocolSpec.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		B6085AB520D4F85400BABA4F /* util */ = {
+			isa = PBXGroup;
+			children = (
+				B6085AB620D4F86100BABA4F /* StringUtilSpec.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		B6CC05F520D2F06800254F87 = {
@@ -259,7 +279,6 @@
 				B6085A7D20D305E700BABA4F /* Mothers */,
 				B6085A7A20D3010900BABA4F /* Resources */,
 				B6085A7720D300D400BABA4F /* Helper */,
-				B6CC061620D2F06900254F87 /* ShoppingAppTests.swift */,
 				B6CC061820D2F06900254F87 /* Info.plist */,
 			);
 			path = ShoppingAppTests;
@@ -591,7 +610,6 @@
 				B6085AA920D4718100BABA4F /* ProductMediaMother.swift in Sources */,
 				B6085A8420D30BFE00BABA4F /* ProductResourceTests.swift in Sources */,
 				B6085A8820D3183400BABA4F /* PriceResourceTests.swift in Sources */,
-				B6CC061720D2F06900254F87 /* ShoppingAppTests.swift in Sources */,
 				B6E0567E20D2FAA300613D05 /* ProductsResourceTests.swift in Sources */,
 				B6085A8A20D3184200BABA4F /* PriceMother.swift in Sources */,
 				B6085A7F20D305FC00BABA4F /* ProductMother.swift in Sources */,
@@ -599,8 +617,10 @@
 				B6085A9520D44E8800BABA4F /* ProductDetailsMother.swift in Sources */,
 				B6085AA120D4646B00BABA4F /* ProductFeatureMother.swift in Sources */,
 				B6085A7920D300E900BABA4F /* FileHelper.swift in Sources */,
+				B6085AB720D4F86100BABA4F /* StringUtilSpec.swift in Sources */,
 				B6085AB120D4F4AB00BABA4F /* MockHttpSchemeBuilder.swift in Sources */,
 				B6085A9F20D4560C00BABA4F /* ProductAdditionalServicesMother.swift in Sources */,
+				B6085AB420D4F54A00BABA4F /* HttpSchemeProtocolSpec.swift in Sources */,
 				B6085AA320D465C000BABA4F /* ProductFeatureResource.swift in Sources */,
 				B6085AAB20D4ECEE00BABA4F /* ProductMediaResourceTests.swift in Sources */,
 			);

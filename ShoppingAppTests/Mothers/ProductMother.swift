@@ -18,16 +18,6 @@ class ProductMother {
         return JSON(data)
     }
 
-    class func productImageUrlWithHttpScheme() -> JSON {
-        let data: Data = "{\"image\":\"http://johnlewis.com/image/1\"}".data(using: .utf8)!
-        return JSON(data)
-    }
-
-    class func productImageUrlWithHttpsScheme() -> JSON {
-        let data: Data = "{\"image\":\"https://johnlewis.com/image/2\"}".data(using: .utf8)!
-        return JSON(data)
-    }
-
     class func product3215462Json() -> JSON {
         let data: Data = FileHelper().createData(fromFilename: "product-3215462", ofType: "json")!
         return JSON(data)
