@@ -1,6 +1,6 @@
 import Foundation
 
-protocol ProductCellRepresentable {
+protocol ProductCellRepresentable: CollectionViewItem {
 
     var title: String { get }
 

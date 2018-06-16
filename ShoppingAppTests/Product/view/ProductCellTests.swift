@@ -11,12 +11,16 @@ class ProductCellTests: XCTestCase {
         cell = NibCreator.createNib(ofClass: ProductCell.self) as! ProductCell
     }
 
-    func testConfigureCell_whenHasValidContent_populatesLabelTexs() {
+    func testConfigureCell_whenHasContent_setsLabelText() {
         let product: ProductResource = ProductMother.createProducts().products.first!
         cell.configureCell(with: product)
 
         XCTAssertEqual(cell.priceLabel.text, "£349.00")
         XCTAssertEqual(cell.titleLabel.text, "Bosch SMS25AW00G Freestanding Dishwasher, White")
+    }
+
+    func testIdentifier_returnsProductCellString() {
+        XCTAssertEqual(ProductCell.identifier, "ProductCell")
     }
 
 }

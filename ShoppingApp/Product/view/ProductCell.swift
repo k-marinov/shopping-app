@@ -1,7 +1,9 @@
 import UIKit
 import Kingfisher
 
-class ProductCell: UICollectionViewCell {
+class ProductCell: UICollectionViewCell, CollectionViewCell {
+
+    static var identifier: String = "\(ProductCell.self)"
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -11,11 +13,13 @@ class ProductCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    func configureCell(with product: ProductCellRepresentable) {
+    func configureCell(with collectionViewItem: CollectionViewItem) {
+        let representable = collectionViewItem as! ProductCellRepresentable
         resetContent()
-        titleLabel.text = product.title
-        priceLabel.text = product.priceNowFormatted()
-        _ = product.imageUrl()
+
+        titleLabel.text = representable.title
+        priceLabel.text = representable.priceNowFormatted()
+        _ = representable.imageUrl()
             .map { imageUrl in
                 imageView.kf.setImage(with: imageUrl)
         }
