@@ -43,7 +43,7 @@ class ApiRequestTests: XCTestCase {
                 expect.fulfill()
             }).disposed(by: disposeBag)
 
-        wait(for: [expect], timeout: 5.0)
+        wait(for: [expect], timeout: Constants.timeout)
 
         XCTAssertEqual(apiError, ApiError.network)
     }
@@ -62,7 +62,7 @@ class ApiRequestTests: XCTestCase {
                 expect.fulfill()
             }).disposed(by: disposeBag)
 
-        wait(for: [expect], timeout: 5.0)
+        wait(for: [expect], timeout: Constants.timeout)
 
         XCTAssertEqual(apiError, ApiError.client)
     }
@@ -83,7 +83,7 @@ class ApiRequestTests: XCTestCase {
                 expect.fulfill()
             }).disposed(by: disposeBag)
 
-        wait(for: [expect], timeout: 5.0)
+        wait(for: [expect], timeout: Constants.timeout)
 
         XCTAssertNil(apiError)
         XCTAssertNotNil(apiResponse)

@@ -8,4 +8,9 @@ class ProductRemote {
         apiClient = componentCreatable.create(with: componentCreatable)
     }
 
+    func findAllProducts(with request: ProductsRequest) -> Observable<[ProductResource]> {
+        return apiClient.request(with: request)
+            .map { ($0.resource as! ProductsResource).products }
+    }
+
 }

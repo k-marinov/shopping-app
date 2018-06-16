@@ -8,4 +8,7 @@ class ProductService: Service {
         productRemote = componentCreatable.create(with: componentCreatable)
     }
 
+    func findAllProducts(with request: ProductsRequest) -> Observable<[ProductResource]> {
+        return productRemote.findAllProducts(with:request)
+    }
 }
