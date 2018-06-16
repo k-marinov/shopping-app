@@ -9,6 +9,15 @@ class ProductsViewController: UIViewController, ModelableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUp()
+    }
+
+    private func setUp() {
+        setUpNavigationBarTitle()
+    }
+
+    private func setUpNavigationBarTitle() {
+        navigationItem.title = "Products"
     }
 
 }

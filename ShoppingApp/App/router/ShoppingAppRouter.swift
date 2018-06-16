@@ -17,11 +17,11 @@ class ShoppingAppRouter: ViewControllerCreatable, Navigation {
     }
 
     private func rootNavigationController(rootViewController: UIViewController) -> UINavigationController {
-        let navigationController: UINavigationController = UINavigationController(rootViewController: rootViewController)
-        navigationController.navigationBar.tintColor = UIColor.gray
-        navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.gray]
-        return navigationController
+        let controller: UINavigationController = UINavigationController(rootViewController: rootViewController)
+        controller.navigationBar.tintColor = UIColor.gray
+        controller.navigationBar.isTranslucent = true
+        controller.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.gray]
+        return controller
     }
 
 }
