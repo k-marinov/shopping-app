@@ -79,6 +79,11 @@
 		B6085B1320D55A9B00BABA4F /* ViewControllerCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B1220D55A9B00BABA4F /* ViewControllerCreatable.swift */; };
 		B6085B1520D55ABA00BABA4F /* ModelableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B1420D55ABA00BABA4F /* ModelableViewController.swift */; };
 		B6085B1820D562D300BABA4F /* ShoppingAppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B1720D562D300BABA4F /* ShoppingAppRouterTests.swift */; };
+		B6085B1A20D5650300BABA4F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B1920D5650300BABA4F /* ProductCell.swift */; };
+		B6085B1D20D58C3000BABA4F /* ProductCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B1C20D58C3000BABA4F /* ProductCellTests.swift */; };
+		B6085B1F20D58D3C00BABA4F /* NibCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B1E20D58D3C00BABA4F /* NibCreator.swift */; };
+		B6085B2120D58EF600BABA4F /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6085B2020D58EF600BABA4F /* ProductCell.xib */; };
+		B6085B2420D5930D00BABA4F /* ProductRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B2320D5930D00BABA4F /* ProductRepresentable.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -173,6 +178,11 @@
 		B6085B1220D55A9B00BABA4F /* ViewControllerCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCreatable.swift; sourceTree = "<group>"; };
 		B6085B1420D55ABA00BABA4F /* ModelableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelableViewController.swift; sourceTree = "<group>"; };
 		B6085B1720D562D300BABA4F /* ShoppingAppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAppRouterTests.swift; sourceTree = "<group>"; };
+		B6085B1920D5650300BABA4F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B6085B1C20D58C3000BABA4F /* ProductCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellTests.swift; sourceTree = "<group>"; };
+		B6085B1E20D58D3C00BABA4F /* NibCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCreator.swift; sourceTree = "<group>"; };
+		B6085B2020D58EF600BABA4F /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		B6085B2320D5930D00BABA4F /* ProductRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepresentable.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +265,7 @@
 		B6085A7720D300D400BABA4F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B1E20D58D3C00BABA4F /* NibCreator.swift */,
 				B6085B0220D54AB200BABA4F /* RxCollector.swift */,
 				B6085A7820D300E900BABA4F /* FileHelper.swift */,
 			);
@@ -425,6 +436,8 @@
 		B6085B0420D5562400BABA4F /* view */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B1920D5650300BABA4F /* ProductCell.swift */,
+				B6085B2020D58EF600BABA4F /* ProductCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -461,6 +474,22 @@
 				B6085B1720D562D300BABA4F /* ShoppingAppRouterTests.swift */,
 			);
 			path = router;
+			sourceTree = "<group>";
+		};
+		B6085B1B20D58C2400BABA4F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B1C20D58C3000BABA4F /* ProductCellTests.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B6085B2220D592EA00BABA4F /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B2320D5930D00BABA4F /* ProductRepresentable.swift */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 		B6CC05F520D2F06800254F87 = {
@@ -526,11 +555,11 @@
 				B6085B0420D5562400BABA4F /* view */,
 				B6085AF520D5460200BABA4F /* viewmodel */,
 				B6085AB820D4FD5C00BABA4F /* viewcontroller */,
-				B6E0567A20D2FA1E00613D05 /* response */,
 				B6E0567920D2FA1600613D05 /* service */,
 				B6E0567820D2FA1100613D05 /* remote */,
 				B6E0567720D2FA0C00613D05 /* request */,
 				B6E0567620D2FA0600613D05 /* resource */,
+				B6085B2220D592EA00BABA4F /* protocol */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -573,16 +602,10 @@
 			path = service;
 			sourceTree = "<group>";
 		};
-		B6E0567A20D2FA1E00613D05 /* response */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = response;
-			sourceTree = "<group>";
-		};
 		B6E0567B20D2FA8800613D05 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B1B20D58C2400BABA4F /* view */,
 				B6085B1620D562C500BABA4F /* router */,
 				B6085AF820D546F800BABA4F /* viewmodel */,
 				B6085AF020D5407700BABA4F /* service */,
@@ -693,6 +716,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6CC060C20D2F06800254F87 /* LaunchScreen.storyboard in Resources */,
+				B6085B2120D58EF600BABA4F /* ProductCell.xib in Resources */,
 				B6CC060920D2F06800254F87 /* Assets.xcassets in Resources */,
 				B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */,
 			);
@@ -830,6 +854,7 @@
 				B6085ABA20D4FD8C00BABA4F /* ProductsRequest.swift in Sources */,
 				B6085B0920D558DF00BABA4F /* RouterCreatable.swift in Sources */,
 				B6085A8620D315D900BABA4F /* PriceResource.swift in Sources */,
+				B6085B2420D5930D00BABA4F /* ProductRepresentable.swift in Sources */,
 				B6085AE220D53A2D00BABA4F /* UtilityCreatable.swift in Sources */,
 				B6085AAD20D4EECF00BABA4F /* HttpSchemeBuilder.swift in Sources */,
 				B6085B0F20D55A1600BABA4F /* ProductsRouter.swift in Sources */,
@@ -861,6 +886,7 @@
 				B6085ACC20D5116100BABA4F /* ApiResponse.swift in Sources */,
 				B6085ACA20D510D400BABA4F /* HttpResponse.swift in Sources */,
 				B6085A7020D2FC6900BABA4F /* Resource.swift in Sources */,
+				B6085B1A20D5650300BABA4F /* ProductCell.swift in Sources */,
 				B6085B1120D55A8F00BABA4F /* Navigation.swift in Sources */,
 				B6085ADA20D539BC00BABA4F /* ComponentCreatable.swift in Sources */,
 			);
@@ -872,6 +898,7 @@
 			files = (
 				B6085AEB20D53C4300BABA4F /* ProductsHttpMocker.swift in Sources */,
 				B6085AFC20D5482400BABA4F /* MockComponentCreator.swift in Sources */,
+				B6085B1D20D58C3000BABA4F /* ProductCellTests.swift in Sources */,
 				B6085A9D20D4551000BABA4F /* ProductAdditionalServicesResourceTests.swift in Sources */,
 				B6085AFE20D5486600BABA4F /* MockProductService.swift in Sources */,
 				B6085AA920D4718100BABA4F /* ProductMediaMother.swift in Sources */,
@@ -889,6 +916,7 @@
 				B6085AD320D5185300BABA4F /* ApiResponseTests.swift in Sources */,
 				B6085AC820D50B1200BABA4F /* ApiRequestTests.swift in Sources */,
 				B6085B1820D562D300BABA4F /* ShoppingAppRouterTests.swift in Sources */,
+				B6085B1F20D58D3C00BABA4F /* NibCreator.swift in Sources */,
 				B6085AA120D4646B00BABA4F /* ProductFeatureMother.swift in Sources */,
 				B6085AFA20D5470B00BABA4F /* ProductsViewModelTests.swift in Sources */,
 				B6085A7920D300E900BABA4F /* FileHelper.swift in Sources */,

@@ -1,12 +1,12 @@
 import SwiftyJSON
 
-struct ProductResource: Resource, HttpSchemeBuilder {
+struct ProductResource: Resource, ProductCellRepresentable, HttpSchemeBuilder {
 
     private(set) var id: Int
     private(set) var title: String
-    private(set) var imageUrl: String?
     private(set) var displaySpecialOffer: String
     private(set) var code: String
+    private var image: String?
     private let price: PriceResource
     private let details: ProductDetailsResource
     private let additionalServices: ProductAdditionalServicesResource
@@ -21,11 +21,7 @@ struct ProductResource: Resource, HttpSchemeBuilder {
         details = ProductDetailsResource(json: json["details"])
         additionalServices = ProductAdditionalServicesResource(json: json["additionalServices"])
         media = ProductMediaResource(json: json["media"])
-        imageUrl = addHttpScheme(to: json["image"].stringValue)
-    }
-
-    func priceNowFormatted() -> String {
-        return price.priceNowFormatted()
+        image = addHttpScheme(to: json["image"].stringValue)
     }
 
     func information() -> String {
@@ -42,6 +38,17 @@ struct ProductResource: Resource, HttpSchemeBuilder {
 
     func imageUrls() -> [String] {
         return media.imageUrls
+    }
+
+    func priceNowFormatted() -> String {
+        return price.priceNowFormatted()
+    }
+
+    func imageUrl() -> URL? {
+        if let imageUrl: String = image, let url: URL = URL(string: imageUrl) {
+            return url
+        }
+        return nil
     }
 
 }

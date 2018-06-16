@@ -1,14 +1,13 @@
-
 import XCTest
 
 @testable import ShoppingApp
 
 class ShoppingAppRouterTests: XCTestCase {
 
-    let creator: MockComponentCreator = MockComponentCreator.buildAllMocks()
-    var viewModel: ProductsViewModel!
-    var isLoadingCollector: RxCollector<Bool>!
-    var reloadDataCollector: RxCollector<Void>!
+    private let creator: MockComponentCreator = MockComponentCreator.buildAllMocks()
+    private var viewModel: ProductsViewModel!
+    private var isLoadingCollector: RxCollector<Bool>!
+    private var reloadDataCollector: RxCollector<Void>!
 
     func testSetRootViewController_returnsUINavigationControllerAsRoot() {
         let router: ShoppingAppRouter = ShoppingAppRouter(componentCreatable: creator)
