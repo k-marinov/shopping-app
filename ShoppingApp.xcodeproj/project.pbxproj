@@ -72,6 +72,12 @@
 		B6085B0020D549C400BABA4F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AFF20D549C400BABA4F /* ViewModel.swift */; };
 		B6085B0320D54AB200BABA4F /* RxCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B0220D54AB200BABA4F /* RxCollector.swift */; };
 		B6085B0720D557CC00BABA4F /* ShoppingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B0620D557CC00BABA4F /* ShoppingApp.swift */; };
+		B6085B0920D558DF00BABA4F /* RouterCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B0820D558DF00BABA4F /* RouterCreatable.swift */; };
+		B6085B0D20D5594900BABA4F /* ShoppingAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B0C20D5594900BABA4F /* ShoppingAppRouter.swift */; };
+		B6085B0F20D55A1600BABA4F /* ProductsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B0E20D55A1600BABA4F /* ProductsRouter.swift */; };
+		B6085B1120D55A8F00BABA4F /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B1020D55A8F00BABA4F /* Navigation.swift */; };
+		B6085B1320D55A9B00BABA4F /* ViewControllerCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B1220D55A9B00BABA4F /* ViewControllerCreatable.swift */; };
+		B6085B1520D55ABA00BABA4F /* ModelableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B1420D55ABA00BABA4F /* ModelableViewController.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -159,6 +165,12 @@
 		B6085AFF20D549C400BABA4F /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B6085B0220D54AB200BABA4F /* RxCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollector.swift; sourceTree = "<group>"; };
 		B6085B0620D557CC00BABA4F /* ShoppingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingApp.swift; sourceTree = "<group>"; };
+		B6085B0820D558DF00BABA4F /* RouterCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterCreatable.swift; sourceTree = "<group>"; };
+		B6085B0C20D5594900BABA4F /* ShoppingAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAppRouter.swift; sourceTree = "<group>"; };
+		B6085B0E20D55A1600BABA4F /* ProductsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRouter.swift; sourceTree = "<group>"; };
+		B6085B1020D55A8F00BABA4F /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		B6085B1220D55A9B00BABA4F /* ViewControllerCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCreatable.swift; sourceTree = "<group>"; };
+		B6085B1420D55ABA00BABA4F /* ModelableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelableViewController.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +239,9 @@
 		B6085A7120D2FC8400BABA4F /* protocol */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B1420D55ABA00BABA4F /* ModelableViewController.swift */,
+				B6085B1220D55A9B00BABA4F /* ViewControllerCreatable.swift */,
+				B6085B1020D55A8F00BABA4F /* Navigation.swift */,
 				B6085AFF20D549C400BABA4F /* ViewModel.swift */,
 				B6085A6F20D2FC6900BABA4F /* Resource.swift */,
 				B6085AAC20D4EECF00BABA4F /* HttpSchemeBuilder.swift */,
@@ -278,6 +293,7 @@
 				B6085ADF20D539F300BABA4F /* ApiClient.swift */,
 				B6085ADB20D539CE00BABA4F /* Service.swift */,
 				B6085ADC20D539CE00BABA4F /* ServiceCreatable.swift */,
+				B6085B0820D558DF00BABA4F /* RouterCreatable.swift */,
 				B6085AD920D539BC00BABA4F /* ComponentCreatable.swift */,
 				B6085AE320D53A3D00BABA4F /* RemoteCreatable.swift */,
 				B6085A8C20D3189F00BABA4F /* StringUtil.swift */,
@@ -414,10 +430,27 @@
 		B6085B0520D557B800BABA4F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B0B20D5593700BABA4F /* router */,
 				B6CC060120D2F06800254F87 /* AppDelegate.swift */,
 				B6085B0620D557CC00BABA4F /* ShoppingApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		B6085B0A20D5593100BABA4F /* router */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B0E20D55A1600BABA4F /* ProductsRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		B6085B0B20D5593700BABA4F /* router */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B0C20D5594900BABA4F /* ShoppingAppRouter.swift */,
+			);
+			path = router;
 			sourceTree = "<group>";
 		};
 		B6CC05F520D2F06800254F87 = {
@@ -479,6 +512,7 @@
 		B6E0567520D2F9FD00613D05 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B0A20D5593100BABA4F /* router */,
 				B6085B0420D5562400BABA4F /* view */,
 				B6085AF520D5460200BABA4F /* viewmodel */,
 				B6085AB820D4FD5C00BABA4F /* viewcontroller */,
@@ -783,12 +817,15 @@
 				B6085ADD20D539CE00BABA4F /* Service.swift in Sources */,
 				B6085B0720D557CC00BABA4F /* ShoppingApp.swift in Sources */,
 				B6085ABA20D4FD8C00BABA4F /* ProductsRequest.swift in Sources */,
+				B6085B0920D558DF00BABA4F /* RouterCreatable.swift in Sources */,
 				B6085A8620D315D900BABA4F /* PriceResource.swift in Sources */,
 				B6085AE220D53A2D00BABA4F /* UtilityCreatable.swift in Sources */,
 				B6085AAD20D4EECF00BABA4F /* HttpSchemeBuilder.swift in Sources */,
+				B6085B0F20D55A1600BABA4F /* ProductsRouter.swift in Sources */,
 				B6085AD820D5395000BABA4F /* HttpClient.swift in Sources */,
 				B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */,
 				B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */,
+				B6085B1320D55A9B00BABA4F /* ViewControllerCreatable.swift in Sources */,
 				B6085AA720D470D000BABA4F /* ProductMediaResource.swift in Sources */,
 				B6085AE020D539F300BABA4F /* ApiClient.swift in Sources */,
 				B6085AC220D5014200BABA4F /* HttpMethod.swift in Sources */,
@@ -802,7 +839,9 @@
 				B6085AE420D53A3D00BABA4F /* RemoteCreatable.swift in Sources */,
 				B6085A9120D44C8000BABA4F /* ProductDetailsResource.swift in Sources */,
 				B6085AD020D5171D00BABA4F /* ApiError.swift in Sources */,
+				B6085B1520D55ABA00BABA4F /* ModelableViewController.swift in Sources */,
 				B6085B0020D549C400BABA4F /* ViewModel.swift in Sources */,
+				B6085B0D20D5594900BABA4F /* ShoppingAppRouter.swift in Sources */,
 				B6085AE620D53A5D00BABA4F /* ProductRemote.swift in Sources */,
 				B6085AA520D4663400BABA4F /* ProductFeatureResource.swift in Sources */,
 				B6085AD520D518CC00BABA4F /* HttpStatusCode.swift in Sources */,
@@ -811,6 +850,7 @@
 				B6085ACC20D5116100BABA4F /* ApiResponse.swift in Sources */,
 				B6085ACA20D510D400BABA4F /* HttpResponse.swift in Sources */,
 				B6085A7020D2FC6900BABA4F /* Resource.swift in Sources */,
+				B6085B1120D55A8F00BABA4F /* Navigation.swift in Sources */,
 				B6085ADA20D539BC00BABA4F /* ComponentCreatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

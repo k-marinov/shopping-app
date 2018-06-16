@@ -2,14 +2,17 @@ import UIKit
 
 class ShoppingApp {
 
-    private var componentCreatable: ComponentCreatable!
+    private let shoppingAppRouter: ShoppingAppRouter
+    private let componentCreatable: ComponentCreatable
 
-    init(componentCreatable: ComponentCreatable) {
+    required init(componentCreatable: ComponentCreatable) {
         self.componentCreatable = componentCreatable
+        shoppingAppRouter = componentCreatable.create(with: componentCreatable)
     }
 
-    func setUp(with window: UIWindow) {
+    func setUp(with window: UIWindow) -> UIWindow {
         UIApplication.shared.statusBarStyle = .lightContent
+        return shoppingAppRouter.setRootViewController(to: window, componentCreatable: componentCreatable)
     }
 
 }

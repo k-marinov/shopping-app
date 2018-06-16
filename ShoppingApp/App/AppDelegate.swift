@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         if isProductionEnabled() {
-            shoppingApp.setUp(with: window!)
+            _ = shoppingApp.setUp(with: window!)
         }
         return true
     }
