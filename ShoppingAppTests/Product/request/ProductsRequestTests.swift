@@ -12,4 +12,22 @@ class ProductsRequestTests: XCTestCase {
         XCTAssertEqual(ProductsRequest().httpRequestUrl(), expectedUrl)
     }
 
+    func testHttpMethod_whenHasValue_returnsHttpMethodGet() {
+        XCTAssertEqual(ProductsRequest().httpMethod(), HttpMethod.get)
+    }
+
+    func testResource_whenHasValidData_returnsProductsResource() {
+        let httpResponse: HttpResponse = HttpResponseMother.createHttpResponse(withStatusCode: 200)
+        let response: ApiResponse = ProductsRequest().response(from: httpResponse)
+
+        XCTAssertTrue(response.resource is ProductsResource)
+    }
+
+    func testResource_whenHasEmptyData_returnsNil() {
+        let httpResponse: HttpResponse = HttpResponseMother.createEmptyHttpResponse(withStatusCode: 200)
+        let response: ApiResponse = ProductsRequest().response(from: httpResponse)
+
+        XCTAssertNil(response.resource)
+    }
+
 }

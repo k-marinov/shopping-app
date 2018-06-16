@@ -41,6 +41,14 @@
 		B6085ABA20D4FD8C00BABA4F /* ProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AB920D4FD8C00BABA4F /* ProductsRequest.swift */; };
 		B6085ABD20D4FDAA00BABA4F /* ProductsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ABC20D4FDAA00BABA4F /* ProductsRequestTests.swift */; };
 		B6085ABF20D4FFD200BABA4F /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ABE20D4FFD200BABA4F /* ApiRequest.swift */; };
+		B6085AC220D5014200BABA4F /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AC120D5014200BABA4F /* HttpMethod.swift */; };
+		B6085AC420D5055100BABA4F /* ApiRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AC320D5055100BABA4F /* ApiRequestError.swift */; };
+		B6085AC620D5064800BABA4F /* MockProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AC520D5064800BABA4F /* MockProductsRequest.swift */; };
+		B6085AC820D50B1200BABA4F /* ApiRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AC720D50B1200BABA4F /* ApiRequestTests.swift */; };
+		B6085ACA20D510D400BABA4F /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085AC920D510D400BABA4F /* HttpResponse.swift */; };
+		B6085ACC20D5116100BABA4F /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ACB20D5116100BABA4F /* ApiResponse.swift */; };
+		B6085ACE20D512B100BABA4F /* HttpResponseMother.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ACD20D512B100BABA4F /* HttpResponseMother.swift */; };
+		B6085AD020D5171D00BABA4F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085ACF20D5171D00BABA4F /* ApiError.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ViewController.swift */; };
 		B6CC060720D2F06800254F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* Main.storyboard */; };
@@ -97,6 +105,14 @@
 		B6085AB920D4FD8C00BABA4F /* ProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequest.swift; sourceTree = "<group>"; };
 		B6085ABC20D4FDAA00BABA4F /* ProductsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequestTests.swift; sourceTree = "<group>"; };
 		B6085ABE20D4FFD200BABA4F /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		B6085AC120D5014200BABA4F /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		B6085AC320D5055100BABA4F /* ApiRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestError.swift; sourceTree = "<group>"; };
+		B6085AC520D5064800BABA4F /* MockProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsRequest.swift; sourceTree = "<group>"; };
+		B6085AC720D50B1200BABA4F /* ApiRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestTests.swift; sourceTree = "<group>"; };
+		B6085AC920D510D400BABA4F /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
+		B6085ACB20D5116100BABA4F /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		B6085ACD20D512B100BABA4F /* HttpResponseMother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseMother.swift; sourceTree = "<group>"; };
+		B6085ACF20D5171D00BABA4F /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +171,7 @@
 		B6085A6E20D2FC5E00BABA4F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B6085AC020D5012F00BABA4F /* model */,
 				B6085A8B20D3188900BABA4F /* util */,
 				B6085A7120D2FC8400BABA4F /* protocol */,
 			);
@@ -199,6 +216,7 @@
 				B6085A9E20D4560C00BABA4F /* ProductAdditionalServicesMother.swift */,
 				B6085AA020D4646B00BABA4F /* ProductFeatureMother.swift */,
 				B6085AA820D4718100BABA4F /* ProductMediaMother.swift */,
+				B6085ACD20D512B100BABA4F /* HttpResponseMother.swift */,
 			);
 			path = Mothers;
 			sourceTree = "<group>";
@@ -224,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				B6085AB020D4F4AB00BABA4F /* MockHttpSchemeBuilder.swift */,
+				B6085AC520D5064800BABA4F /* MockProductsRequest.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -232,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				B6085AB320D4F54A00BABA4F /* HttpSchemeProtocolSpec.swift */,
+				B6085AC720D50B1200BABA4F /* ApiRequestTests.swift */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -258,6 +278,18 @@
 				B6085ABC20D4FDAA00BABA4F /* ProductsRequestTests.swift */,
 			);
 			path = request;
+			sourceTree = "<group>";
+		};
+		B6085AC020D5012F00BABA4F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B6085AC120D5014200BABA4F /* HttpMethod.swift */,
+				B6085AC320D5055100BABA4F /* ApiRequestError.swift */,
+				B6085AC920D510D400BABA4F /* HttpResponse.swift */,
+				B6085ACB20D5116100BABA4F /* ApiResponse.swift */,
+				B6085ACF20D5171D00BABA4F /* ApiError.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		B6CC05F520D2F06800254F87 = {
@@ -620,12 +652,17 @@
 				B6CC060420D2F06800254F87 /* ViewController.swift in Sources */,
 				B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */,
 				B6085AA720D470D000BABA4F /* ProductMediaResource.swift in Sources */,
+				B6085AC220D5014200BABA4F /* HttpMethod.swift in Sources */,
 				B6E0568020D2FB9B00613D05 /* ProductResource.swift in Sources */,
 				B6085A7320D2FD5800BABA4F /* ProductsResource.swift in Sources */,
 				B6085A9B20D454E500BABA4F /* ProductAdditionalServicesResource.swift in Sources */,
 				B6085A9120D44C8000BABA4F /* ProductDetailsResource.swift in Sources */,
+				B6085AD020D5171D00BABA4F /* ApiError.swift in Sources */,
 				B6085AA520D4663400BABA4F /* ProductFeatureResource.swift in Sources */,
+				B6085AC420D5055100BABA4F /* ApiRequestError.swift in Sources */,
 				B6085ABF20D4FFD200BABA4F /* ApiRequest.swift in Sources */,
+				B6085ACC20D5116100BABA4F /* ApiResponse.swift in Sources */,
+				B6085ACA20D510D400BABA4F /* HttpResponse.swift in Sources */,
 				B6085A7020D2FC6900BABA4F /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,10 +676,13 @@
 				B6085A8420D30BFE00BABA4F /* ProductResourceTests.swift in Sources */,
 				B6085A8820D3183400BABA4F /* PriceResourceTests.swift in Sources */,
 				B6E0567E20D2FAA300613D05 /* ProductsResourceTests.swift in Sources */,
+				B6085ACE20D512B100BABA4F /* HttpResponseMother.swift in Sources */,
 				B6085A8A20D3184200BABA4F /* PriceMother.swift in Sources */,
 				B6085A7F20D305FC00BABA4F /* ProductMother.swift in Sources */,
+				B6085AC620D5064800BABA4F /* MockProductsRequest.swift in Sources */,
 				B6085A8F20D448BD00BABA4F /* ProductDetailsResourceTests.swift in Sources */,
 				B6085A9520D44E8800BABA4F /* ProductDetailsMother.swift in Sources */,
+				B6085AC820D50B1200BABA4F /* ApiRequestTests.swift in Sources */,
 				B6085AA120D4646B00BABA4F /* ProductFeatureMother.swift in Sources */,
 				B6085A7920D300E900BABA4F /* FileHelper.swift in Sources */,
 				B6085AB720D4F86100BABA4F /* StringUtilSpec.swift in Sources */,
