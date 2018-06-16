@@ -4,9 +4,9 @@ import RxSwift
 class CollectionViewDataSource<ITEM: CollectionViewItem, CELL: CollectionViewCell>: NSObject, UICollectionViewDataSource,
 UICollectionViewDelegate {
 
-    private var items: [CollectionViewItem] = [CollectionViewItem]()
+    private(set) var items: [CollectionViewItem] = [CollectionViewItem]()
     private let didSelectItem: PublishSubject<IndexPath> = PublishSubject<IndexPath>()
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }

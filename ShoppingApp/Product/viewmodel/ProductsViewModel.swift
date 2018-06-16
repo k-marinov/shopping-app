@@ -4,6 +4,8 @@ class ProductsViewModel: ViewModel {
 
     private(set) var isLoading: PublishSubject<Bool> = PublishSubject<Bool>()
     private(set) var reloadData: PublishSubject<Void> = PublishSubject<Void>()
+    private(set) var dataSource: CollectionViewDataSource<ProductResource, ProductCell> =
+        CollectionViewDataSource<ProductResource, ProductCell>()
     private(set) var productService: ProductService
 
     required init(componentCreatable: ComponentCreatable) {
@@ -19,7 +21,7 @@ class ProductsViewModel: ViewModel {
         return productService.findAllProducts(with: ProductsRequest())
             .observeOn(MainScheduler.instance)
             .do(onNext: { [weak self] newProducts in
-                // TODO: append to datasource
+                self?.dataSource.appendOnce(contentsOf: newProducts)
                 }, onError: { [weak self] error in
                     self?.onLoadProductsCompleted(with: error as! ApiError)
                 }, onCompleted: {  [weak self] in

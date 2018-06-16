@@ -36,6 +36,21 @@ class ProductsViewModelTests: XCTestCase {
         XCTAssertEqual(reloadDataCollector.results.count, 1)
     }
 
+    func testLoadProducts_whenProductsAreReturnedWithSuccess_appendsOnceDataSource() {
+        creator.mockProductService().isRequestSuccess = true
+
+        let expectation = self.expectation(description: "")
+        viewModel.loadProducts()
+            .subscribe(onError: { error in
+                expectation.fulfill()
+            }, onCompleted: {
+                expectation.fulfill()
+            }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: Constants.timeout)
+
+        XCTAssertEqual(viewModel.dataSource.items.count, 3)
+    }
+
     func testLoadProducts_whenProductsNotReturned_updatesUi() {
         creator.mockProductService().isRequestSuccess = false
         resetCollectors()
