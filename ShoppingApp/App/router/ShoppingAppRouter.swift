@@ -9,7 +9,19 @@ class ShoppingAppRouter: ViewControllerCreatable, Navigation {
     }
 
     func setRootViewController(to window: UIWindow, componentCreatable: ComponentCreatable) -> UIWindow {
-        return productsRouter.setProductsViewControllerAsRoot(to: window, componentCreatable:componentCreatable)
+        let viewController: ProductsViewController = productsRouter
+            .productsViewController(componentCreatable: componentCreatable)
+        window.rootViewController = rootNavigationController(rootViewController: viewController)
+        window.makeKeyAndVisible()
+        return window
+    }
+
+    private func rootNavigationController(rootViewController: UIViewController) -> UINavigationController {
+        let navigationController: UINavigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.tintColor = UIColor.gray
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.gray]
+        return navigationController
     }
 
 }
