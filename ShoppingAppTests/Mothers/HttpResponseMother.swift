@@ -4,7 +4,7 @@ import Foundation
 
 class HttpResponseMother {
 
-    class func createHttpResponse(withStatusCode statusCode: Int) -> HttpResponse {
+    class func httpResponse(withStatusCode statusCode: Int) -> HttpResponse {
         let response: HTTPURLResponse? = HTTPURLResponse(
             url: URL(string: "http://johnlewis.com")!,
             statusCode: statusCode,
@@ -14,7 +14,7 @@ class HttpResponseMother {
         return HttpResponse(response: response, data: value, error: NSError(domain: "", code: 0, userInfo: nil))
     }
 
-    class func createEmptyHttpResponse(withStatusCode statusCode: Int) -> HttpResponse {
+    class func emptyHttpResponse(withStatusCode statusCode: Int) -> HttpResponse {
         let response: HTTPURLResponse? = HTTPURLResponse(
             url: URL(string: "http://johnlewis.com")!,
             statusCode: statusCode,

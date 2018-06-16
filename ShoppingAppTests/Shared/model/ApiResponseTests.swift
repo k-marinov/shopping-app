@@ -9,7 +9,7 @@ class ApiResponseTests: XCTestCase {
     func testApiFailError_whenHasStatusCode400_returnsApiErrorClient() {
         let response: ApiResponse = ApiResponse(
             resourceType: ProductsResource.self,
-            httpResponse: HttpResponseMother.createEmptyHttpResponse(withStatusCode: 400),
+            httpResponse: HttpResponseMother.emptyHttpResponse(withStatusCode: 400),
             successHttpStatusCode: HttpStatusCode.ok)
 
         XCTAssertEqual(response.apiFailError(), ApiError.client)
@@ -18,7 +18,7 @@ class ApiResponseTests: XCTestCase {
     func testApiFailError_whenHasStatusCode500_returnsApiErrorServer() {
         let response: ApiResponse = ApiResponse(
             resourceType: ProductsResource.self,
-            httpResponse: HttpResponseMother.createEmptyHttpResponse(withStatusCode: 500),
+            httpResponse: HttpResponseMother.emptyHttpResponse(withStatusCode: 500),
             successHttpStatusCode: HttpStatusCode.ok)
 
         XCTAssertEqual(response.apiFailError(), ApiError.server)
@@ -27,7 +27,7 @@ class ApiResponseTests: XCTestCase {
     func testApiFailError_whenHasInvalidStatusCode_returnsApiErrorUnknown() {
         let response: ApiResponse = ApiResponse(
             resourceType: ProductsResource.self,
-            httpResponse: HttpResponseMother.createEmptyHttpResponse(withStatusCode: -100),
+            httpResponse: HttpResponseMother.emptyHttpResponse(withStatusCode: -100),
             successHttpStatusCode: HttpStatusCode.ok)
 
         XCTAssertEqual(response.apiFailError(), ApiError.unknown)
