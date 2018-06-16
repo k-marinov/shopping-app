@@ -13,6 +13,14 @@ class ProductCell: UICollectionViewCell, CollectionViewCell {
         super.awakeFromNib()
     }
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     func configureCell(with collectionViewItem: CollectionViewItem) {
         let representable = collectionViewItem as! ProductCellRepresentable
         resetContent()

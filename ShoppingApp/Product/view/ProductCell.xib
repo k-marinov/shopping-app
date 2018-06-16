@@ -25,7 +25,7 @@
                             <constraint firstAttribute="height" constant="200" id="GBC-4z-QvJ"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apm-PE-Zyv" userLabel="titleLabel">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apm-PE-Zyv" userLabel="titleLabel">
                         <rect key="frame" x="0.0" y="205" width="200" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="lGK-Dv-AA0"/>
@@ -59,7 +59,7 @@
             <connections>
                 <outlet property="imageView" destination="6eV-tv-kxF" id="Vab-9C-m9p"/>
                 <outlet property="priceLabel" destination="Q1V-Wg-GG5" id="ilx-Mh-DK9"/>
-                <outlet property="titleLabel" destination="apm-PE-Zyv" id="0kH-Nw-EoC"/>
+                <outlet property="titleLabel" destination="apm-PE-Zyv" id="3cQ-y7-6Ub"/>
             </connections>
             <point key="canvasLocation" x="-179" y="-291"/>
         </collectionViewCell>

@@ -15,11 +15,8 @@ class CollectionViewDataSourceTests: XCTestCase {
     override func setUp() {
         super.setUp()
         dataSource = CollectionViewDataSource<ProductResource, ProductCell>()
-        collectionView = UICollectionView(frame: frame, collectionViewLayout: UICollectionViewFlowLayout.init())
-        collectionView.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.identifier)
-        collectionView.dataSource = dataSource
-        collectionView.delegate = dataSource
         dataSource.appendOnce(contentsOf: products)
+        setUpCollectionView()
     }
 
     func testAppendOnce_whenNewItemsAreAddedTwice_appendsOnce() {
@@ -37,6 +34,29 @@ class CollectionViewDataSourceTests: XCTestCase {
 
         XCTAssertEqual(collector.results.count, 1)
         XCTAssertEqual(collector.results[0], expectedIndexPath)
+    }
+
+    func testCellForItemAt_whenHasGivenIndexPath_returnsProductCell() {
+        let indexPath: IndexPath = IndexPath(row: 1, section: 0)
+        let cell: UICollectionViewCell = dataSource.collectionView(collectionView, cellForItemAt: indexPath)
+
+        XCTAssertTrue(cell is ProductCell)
+    }
+
+    func testCellForItemAt_whenHasGivenIndexPath_returnsConfiguredProductCell() {
+        let indexPath: IndexPath = IndexPath(row: 1, section: 0)
+        let cell: UICollectionViewCell = dataSource.collectionView(collectionView, cellForItemAt: indexPath)
+        let productCell: ProductCell = cell as! ProductCell
+        
+        XCTAssertEqual(productCell.priceLabel.text, "£359.00")
+        XCTAssertEqual(productCell.titleLabel.text, "Bosch SMV40C30GB Fully Integrated Dishwasher")
+    }
+
+    private func setUpCollectionView() {
+        collectionView = UICollectionView(frame: frame, collectionViewLayout: UICollectionViewFlowLayout.init())
+        collectionView.registerCellNib(with: ProductCell.identifier)
+        collectionView.dataSource = dataSource
+        collectionView.delegate = dataSource
     }
 
 }
