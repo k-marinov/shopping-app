@@ -19,7 +19,7 @@ class ProductsViewModel: ViewModel {
         return productService.findAllProducts(with: ProductsRequest())
             .observeOn(MainScheduler.instance)
             .do(onNext: { [weak self] newProducts in
-               // self?.dataSource.appendOnce(contentsOf: newArticles.sorted { $0.rating > $1.rating })
+                // TODO: append to datasource
                 }, onError: { [weak self] error in
                     self?.onLoadProductsCompleted(with: error as! ApiError)
                 }, onCompleted: {  [weak self] in

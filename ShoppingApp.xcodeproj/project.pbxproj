@@ -402,6 +402,13 @@
 			path = viewmodel;
 			sourceTree = "<group>";
 		};
+		B6085B0420D5562400BABA4F /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		B6CC05F520D2F06800254F87 = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +468,7 @@
 		B6E0567520D2F9FD00613D05 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B0420D5562400BABA4F /* view */,
 				B6085AF520D5460200BABA4F /* viewmodel */,
 				B6085AB820D4FD5C00BABA4F /* viewcontroller */,
 				B6E0567A20D2FA1E00613D05 /* response */,
