@@ -1,5 +1,3 @@
-import Foundation
-
 class ProductsRequest: ApiRequest {
 
     func httpRequestUrl() -> String {

@@ -9,7 +9,7 @@ class ProductResourceTests: XCTestCase {
         let json: JSON = ProductMother.emptyProductJson()
         let product: ProductResource = ProductResource(json: json)
 
-        XCTAssertEqual(product.id, 0)
+        XCTAssertEqual(product.id, "")
         XCTAssertEqual(product.title, "")
         XCTAssertNil(product.imageUrl())
         XCTAssertEqual(product.code, "")
@@ -24,7 +24,7 @@ class ProductResourceTests: XCTestCase {
         let json: JSON = ProductMother.product3215462Json()
         let product: ProductResource = ProductResource(json: json)
 
-        XCTAssertEqual(product.id, 3215462)
+        XCTAssertEqual(product.id, "3215462")
         XCTAssertEqual(product.title, "Bosch SMS25AW00G Freestanding Dishwasher, White")
         XCTAssertEqual(product.displaySpecialOffer, "buy 1 free get 1 free")
         XCTAssertEqual(product.code, "81701107")

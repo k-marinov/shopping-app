@@ -2,7 +2,7 @@ import SwiftyJSON
 
 struct ProductResource: Resource, ProductCellRepresentable, HttpSchemeBuilder {
 
-    private(set) var id: Int
+    private(set) var id: String
     private(set) var title: String
     private(set) var displaySpecialOffer: String
     private(set) var code: String
@@ -13,7 +13,7 @@ struct ProductResource: Resource, ProductCellRepresentable, HttpSchemeBuilder {
     private let media: ProductMediaResource
 
     init(json: JSON) {
-        id = json["productId"].intValue
+        id = json["productId"].stringValue
         title = json["title"].stringValue
         displaySpecialOffer = json["displaySpecialOffer"].stringValue
         code = json["code"].stringValue

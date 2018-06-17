@@ -33,7 +33,7 @@ class CollectionViewDataSourceTests: XCTestCase {
 
         XCTAssertEqual(collector.results.count, 1)
         let productResource: ProductResource? = collector.results.first as? ProductResource
-        XCTAssertEqual(productResource?.id, 1955287)
+        XCTAssertEqual(productResource?.id, "1955287")
     }
 
     func testCellForItemAt_whenHasGivenIndexPath_returnsProductCell() {
