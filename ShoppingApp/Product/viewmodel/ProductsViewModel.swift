@@ -3,7 +3,7 @@ import RxSwift
 class ProductsViewModel: ViewModel {
 
     private(set) var isLoading: PublishSubject<Bool> = PublishSubject<Bool>()
-    private(set) var reloadData: PublishSubject<Void> = PublishSubject<Void>()
+    private(set) var reloadData: PublishSubject<Int> = PublishSubject<Int>()
     private(set) var dataSource: CollectionViewDataSource<ProductResource, ProductCell> =
         CollectionViewDataSource<ProductResource, ProductCell>()
     private(set) var productService: ProductService
@@ -39,7 +39,7 @@ class ProductsViewModel: ViewModel {
     private func onLoadProductsCompleted() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         isLoading.onNext(false)
-        reloadData.onNext(())
+        reloadData.onNext(dataSource.count())
     }
 
     private func onLoadProductsCompleted(with error: ApiError) {

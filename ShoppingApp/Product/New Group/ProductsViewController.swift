@@ -20,7 +20,6 @@ class ProductsViewController: UIViewController, ModelableViewController {
     }
 
     private func setUp() {
-        setUpNavigationBarTitle()
         setUpCollectionView()
     }
 
@@ -52,13 +51,15 @@ class ProductsViewController: UIViewController, ModelableViewController {
     private func subscribe() {
         productsViewModel.reloadData
             .asObservable()
-            .subscribe(onNext: { [weak self] _ in
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] count in
                 self?.collectionView.reloadData()
+                self?.setUpNavigationBarTitle(count)
             }).disposed(by: disposeBag)
     }
 
-    private func setUpNavigationBarTitle() {
-        navigationItem.title = "Products"
+    private func setUpNavigationBarTitle(_ count: Int) {
+        navigationItem.title = "Dishwashers(\(count))"
     }
 
 }

@@ -9,13 +9,13 @@ class ProductsViewModelTests: XCTestCase {
     let creator: MockComponentCreator = MockComponentCreator.buildAllMocks()
     var viewModel: ProductsViewModel!
     var isLoadingCollector: RxCollector<Bool>!
-    var reloadDataCollector: RxCollector<Void>!
+    var reloadDataCollector: RxCollector<Int>!
 
     override func setUp() {
         super.setUp()
         viewModel = ProductsViewModel(componentCreatable: creator)
         isLoadingCollector = RxCollector<Bool>().collect(from: viewModel.isLoading.asObservable())
-        reloadDataCollector = RxCollector<Void>().collect(from: viewModel.reloadData.asObservable())
+        reloadDataCollector = RxCollector<Int>().collect(from: viewModel.reloadData.asObservable())
     }
 
     func testLoadProducts_whenProductsAreReturnedWithSuccess_updatesUi() {
@@ -34,6 +34,7 @@ class ProductsViewModelTests: XCTestCase {
         XCTAssertFalse(isLoadingCollector.results.isEmpty)
         XCTAssertEqual(isLoadingCollector.results, [true, false])
         XCTAssertEqual(reloadDataCollector.results.count, 1)
+        XCTAssertEqual(reloadDataCollector.results[0], 3)
     }
 
     func testLoadProducts_whenProductsAreReturnedWithSuccess_appendsOnceDataSource() {
@@ -48,7 +49,7 @@ class ProductsViewModelTests: XCTestCase {
             }).disposed(by: disposeBag)
         wait(for: [expectation], timeout: Constants.timeout)
 
-        XCTAssertEqual(viewModel.dataSource.items.count, 3)
+        XCTAssertEqual(viewModel.dataSource.count(), 3)
     }
 
     func testLoadProducts_whenProductsNotReturned_updatesUi() {

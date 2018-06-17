@@ -4,7 +4,7 @@ import RxSwift
 class CollectionViewDataSource<ITEM: CollectionViewItem, CELL: CollectionViewCell>: NSObject, UICollectionViewDataSource,
 UICollectionViewDelegate {
 
-    private(set) var items: [CollectionViewItem] = [CollectionViewItem]()
+    private var items: [CollectionViewItem] = [CollectionViewItem]()
     private let didSelectItem: PublishSubject<IndexPath> = PublishSubject<IndexPath>()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,6 +32,10 @@ UICollectionViewDelegate {
 
     func didSelectItemAtIndexPath() -> Observable<IndexPath> {
         return didSelectItem.asObservable()
+    }
+
+    func count() -> Int {
+        return items.count
     }
 
 }
