@@ -2,7 +2,7 @@ protocol RouterCreatable {
 
     func create(with componentCreatable: ComponentCreatable) -> ShoppingAppRouter
 
-    func create(with componentCreatable: ComponentCreatable) -> ProductsRouter
+    func create() -> ProductsRouter
 
     func create() -> ProductDetailRouter
 
@@ -14,8 +14,8 @@ extension RouterCreatable {
         return ShoppingAppRouter(componentCreatable: componentCreatable)
     }
 
-    func create(with componentCreatable: ComponentCreatable) -> ProductsRouter {
-        return ProductsRouter(componentCreatable: componentCreatable)
+    func create() -> ProductsRouter {
+        return ProductsRouter()
     }
 
     func create() -> ProductDetailRouter {

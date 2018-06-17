@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad10_5" orientation="portrait">
+    <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,15 @@
             <objects>
                 <viewController storyboardIdentifier="ProductDetailViewController" id="Leo-9N-YyN" customClass="ProductDetailViewController" customModule="ShoppingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EKQ-8k-kpD">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0h0-bW-LZv">
-                                <rect key="frame" x="398.5" y="547.5" width="37" height="37"/>
+                                <rect key="frame" x="537.5" y="408.5" width="37" height="37"/>
                                 <color key="color" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yqx-ef-czo">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="400"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="yJK-et-ybs"/>
@@ -37,7 +37,7 @@
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="UUN-KN-OJ1" customClass="ImageCell" customModule="ShoppingApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="300" height="300"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -63,19 +63,19 @@
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="6H4-Ph-qLE">
-                                <rect key="frame" x="381.5" y="363" width="71" height="37"/>
+                                <rect key="frame" x="520.5" y="363" width="71" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9m-WP-Itd" userLabel="separatorLineView">
-                                <rect key="frame" x="0.0" y="408" width="834" height="18"/>
+                                <rect key="frame" x="0.0" y="408" width="1112" height="18"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="Awa-Jh-T1r"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£499" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfS-CU-Fow" userLabel="priceLabel">
-                                <rect key="frame" x="40" y="454" width="774" height="48"/>
+                                <rect key="frame" x="40" y="454" width="1052" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="MrO-vV-udV"/>
                                 </constraints>
@@ -84,7 +84,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Claim an extra 3 years guarantee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6h-VY-VgJ">
-                                <rect key="frame" x="40" y="502" width="774" height="23.5"/>
+                                <rect key="frame" x="40" y="502" width="1052" height="23.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="SxG-cS-c79"/>
                                 </constraints>
@@ -93,7 +93,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 year guarantee included" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av5-1D-G52">
-                                <rect key="frame" x="40" y="525.5" width="774" height="23.5"/>
+                                <rect key="frame" x="40" y="525.5" width="1052" height="23.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="hfG-DW-Caa"/>
                                 </constraints>
@@ -102,7 +102,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Liq-hM-1wa">
-                                <rect key="frame" x="40" y="589" width="774" height="41"/>
+                                <rect key="frame" x="40" y="589" width="1052" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="zAs-D8-pXQ"/>
                                 </constraints>
@@ -111,7 +111,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The sieme" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqq-aC-B6V">
-                                <rect key="frame" x="40" y="648" width="774" height="35"/>
+                                <rect key="frame" x="40" y="648" width="1052" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="2rS-cN-Hzg"/>
                                 </constraints>
@@ -120,7 +120,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product code: 81701602" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhi-fD-aDy">
-                                <rect key="frame" x="40" y="701" width="774" height="23.5"/>
+                                <rect key="frame" x="40" y="701" width="1052" height="23.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23.5" id="WEU-Ut-DL9"/>
                                 </constraints>
@@ -129,14 +129,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f59-Rq-sPu" userLabel="productCodeSeparator">
-                                <rect key="frame" x="40" y="732" width="794" height="1"/>
+                                <rect key="frame" x="40" y="732" width="1072" height="1"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="vby-WB-keT"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Specification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U66-81-pBX">
-                                <rect key="frame" x="50" y="753" width="764" height="41"/>
+                                <rect key="frame" x="50" y="753" width="1042" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="XDA-nu-zOg"/>
                                 </constraints>
@@ -145,16 +145,60 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DQ4-M2-8j3">
-                                <rect key="frame" x="50" y="794" width="764" height="318"/>
+                                <rect key="frame" x="50" y="794" width="1042" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductFeatureCell" id="hsD-Il-hae">
-                                        <rect key="frame" x="0.0" y="28" width="764" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductFeatureCell" rowHeight="49" id="hsD-Il-hae" customClass="ProductFeatureCell" customModule="ShoppingApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="1042" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hsD-Il-hae" id="xlg-XH-YLJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="764" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1042" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSv-19-Bzz" userLabel="separator">
+                                                    <rect key="frame" x="0.0" y="0.0" width="712" height="2"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="2xO-Ir-ePG"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bS-A8-7wq" userLabel="valueLabel">
+                                                    <rect key="frame" x="360" y="2" width="342" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="pmv-zf-C19"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVf-SR-vGy" userLabel="nameLabel">
+                                                    <rect key="frame" x="10" y="2" width="342" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="FCl-NQ-8mJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9bS-A8-7wq" firstAttribute="top" secondItem="fSv-19-Bzz" secondAttribute="bottom" id="7Z1-Cj-X9I"/>
+                                                <constraint firstAttribute="bottom" secondItem="JVf-SR-vGy" secondAttribute="bottom" id="AlI-co-Yeg"/>
+                                                <constraint firstAttribute="trailing" secondItem="9bS-A8-7wq" secondAttribute="trailing" constant="10" id="Jk3-M3-0h1"/>
+                                                <constraint firstItem="9bS-A8-7wq" firstAttribute="leading" secondItem="JVf-SR-vGy" secondAttribute="trailing" constant="8" id="Mvz-EA-mHw"/>
+                                                <constraint firstItem="JVf-SR-vGy" firstAttribute="top" secondItem="fSv-19-Bzz" secondAttribute="bottom" id="OMz-bz-HJI"/>
+                                                <constraint firstItem="fSv-19-Bzz" firstAttribute="leading" secondItem="xlg-XH-YLJ" secondAttribute="leading" id="PR9-ci-Ud7"/>
+                                                <constraint firstItem="fSv-19-Bzz" firstAttribute="top" secondItem="xlg-XH-YLJ" secondAttribute="top" id="QrL-Pb-wBd"/>
+                                                <constraint firstAttribute="bottom" secondItem="9bS-A8-7wq" secondAttribute="bottom" id="S0q-rX-Ece"/>
+                                                <constraint firstItem="JVf-SR-vGy" firstAttribute="width" secondItem="9bS-A8-7wq" secondAttribute="width" id="S8m-2O-cYn"/>
+                                                <constraint firstAttribute="trailing" secondItem="fSv-19-Bzz" secondAttribute="trailing" id="g6k-XF-qYO"/>
+                                                <constraint firstItem="JVf-SR-vGy" firstAttribute="leading" secondItem="xlg-XH-YLJ" secondAttribute="leading" constant="10" id="q7A-Cl-K4g"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="JVf-SR-vGy" id="pfG-Dg-9NP"/>
+                                            <outlet property="valueLabel" destination="9bS-A8-7wq" id="wLh-76-7uj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -204,8 +248,14 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicatorView" destination="0h0-bW-LZv" id="hbc-Ry-yEK"/>
+                        <outlet property="additionalServicesLabel" destination="av5-1D-G52" id="Xgj-VM-r3n"/>
+                        <outlet property="codeLabel" destination="lhi-fD-aDy" id="mak-xK-GCS"/>
                         <outlet property="collectionView" destination="Yqx-ef-czo" id="qG1-yK-VVR"/>
+                        <outlet property="informationLabel" destination="Jqq-aC-B6V" id="g1k-Ly-Rjb"/>
                         <outlet property="pageControl" destination="6H4-Ph-qLE" id="zE5-cP-JEr"/>
+                        <outlet property="priceLabel" destination="GfS-CU-Fow" id="Df8-tm-KpN"/>
+                        <outlet property="specialOfferLabel" destination="U6h-VY-VgJ" id="Gp3-sd-ajr"/>
+                        <outlet property="tableView" destination="DQ4-M2-8j3" id="eL0-zw-a1Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihv-j6-6dn" userLabel="First Responder" sceneMemberID="firstResponder"/>

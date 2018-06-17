@@ -19,6 +19,18 @@ class ProductsViewController: UIViewController, ModelableViewController {
         productsViewModel.loadProducts()
             .subscribe()
             .disposed(by: disposeBag)
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(orientationChanged),
+            name:  Notification.Name("UIDeviceOrientationDidChangeNotification"), object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    @objc func orientationChanged() {
+        setUpCollectionViewLayout()
+        view.layoutIfNeeded()
     }
 
     private func setUp() {

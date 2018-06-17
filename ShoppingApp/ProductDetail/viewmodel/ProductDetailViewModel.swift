@@ -5,9 +5,11 @@ class ProductDetailViewModel: ViewModel {
     private let disposeBag: DisposeBag = DisposeBag()
     private(set) var isLoading: PublishSubject<Bool> = PublishSubject<Bool>()
     private(set) var reloadImageUrls: PublishSubject<Int> = PublishSubject<Int>()
+    private(set) var reloadFeatures: PublishSubject<Void> = PublishSubject<Void>()
     private(set) var publishProductDetail: PublishSubject<ProductResource> = PublishSubject<ProductResource>()
-    private(set) var imageUrlsDataSource: CollectionViewDataSource<String, ImageCell> =
-        CollectionViewDataSource<String, ImageCell>()
+
+    private(set) var imageUrlsDataSource = CollectionViewDataSource<String, ImageCell>()
+    private(set) var featuresDataSource = TableViewDataSource<ProductFeatureResource, ProductFeatureCell>()
     private(set) var productService: ProductService
     private let product: ProductResource
 
@@ -54,6 +56,7 @@ class ProductDetailViewModel: ViewModel {
     private func onLoadNextProductDetail(product: ProductResource) {
         publishProductDetail.onNext(product)
         imageUrlsDataSource.appendOnce(contentsOf: product.imageUrls())
+        featuresDataSource.appendOnce(contentsOf: product.features())
     }
 
     private func onLoadProductDetailStarted() {
@@ -65,6 +68,7 @@ class ProductDetailViewModel: ViewModel {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         isLoading.onNext(false)
         reloadImageUrls.onNext(imageUrlsDataSource.count())
+        reloadFeatures.onNext(())
     }
 
     private func onProductDetailCompleted(with error: ApiError) {

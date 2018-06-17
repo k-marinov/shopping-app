@@ -1,6 +1,6 @@
 import SwiftyJSON
 
-struct ProductFeatureResource: Resource {
+struct ProductFeatureResource: Resource, TableViewItem {
 
     private(set) var attributeName: String
     private(set) var attributeValue: String
