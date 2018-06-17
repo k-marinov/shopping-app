@@ -7,18 +7,22 @@ class ProductsViewControllerTests: XCTestCase, ViewControllerCreatable {
 
     let disposeBag: DisposeBag = DisposeBag()
     let creator: MockComponentCreator = MockComponentCreator.buildAllMocks()
-    var viewModel: ProductsViewModel!
     var viewController: ProductsViewController!
-
-    override func setUp() {
-        super.setUp()
-        viewModel = ProductsViewModel(componentCreatable: creator)
-    }
 
     func testViewDidLoad_whenViewControllerIsLoaded_loadsProducts() {
         creator.mockProductService().isFindAllProductsRequestSuccess = true
         viewController = productsViewController()
+
+        let expectation = self.expectation(description: "")
+        viewController.productsViewModel.reloadData.subscribe(onNext: { _ in
+            expectation.fulfill()
+        }, onError: { _ in
+            expectation.fulfill()
+        }, onCompleted: {
+            expectation.fulfill()
+        }).disposed(by: disposeBag)
         _ = viewController.view
+        wait(for: [expectation], timeout: Constants.timeout)
 
         XCTAssertEqual(viewController.collectionView.numberOfItems(inSection: 0), 3)
     }
@@ -33,7 +37,9 @@ class ProductsViewControllerTests: XCTestCase, ViewControllerCreatable {
     }
 
     private func productsViewController() -> ProductsViewController {
-        return createViewController(with: viewModel, viewControllerType: ProductsViewController.self)
+        return createViewController(
+            with: ProductsViewModel(componentCreatable: creator),
+            viewControllerType: ProductsViewController.self)
             as! ProductsViewController
     }
 

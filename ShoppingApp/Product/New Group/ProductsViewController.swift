@@ -7,7 +7,7 @@ class ProductsViewController: UIViewController, ModelableViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 
     private let disposeBag: DisposeBag = DisposeBag()
-    private lazy var productsViewModel: ProductsViewModel = {
+    private(set) lazy var productsViewModel: ProductsViewModel = {
         return self.viewModel as! ProductsViewModel
     }()
     var viewModel: ViewModel!

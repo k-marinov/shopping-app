@@ -115,7 +115,11 @@ class ProductDetailViewController: UIViewController, ModelableViewController {
         setUpSpecialOffer(product: product)
         setUpAdditionalServicesLabel(product: product)
         setUpInformation(product: product)
-        setCodeLabel(product: product)
+        setUpCodeLabel(product: product)
+    }
+
+    private func setUpNavigationBarTitle(_ title: String) {
+        navigationItem.title = title
     }
 
     private func setUpPrice(product: ProductResource) {
@@ -134,11 +138,8 @@ class ProductDetailViewController: UIViewController, ModelableViewController {
         informationLabel.attributedText = NSAttributedString(html: product.information())
     }
 
-    private func setCodeLabel(product: ProductResource) {
+    private func setUpCodeLabel(product: ProductResource) {
         codeLabel.text = "Product code: \(product.code)"
     }
 
-    private func setUpNavigationBarTitle(_ title: String) {
-        navigationItem.title = title
-    }
 }
