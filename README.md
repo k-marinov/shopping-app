@@ -65,29 +65,48 @@ Main components of MVVM with Routers and Services architecture are
 
 ## Libraries
 
+
 RxSwift / RxCocoa
+
 • Concurrency 
+
 • Binding ui 
+
 • Functional reactive programming style
+
 • Allows easy testing capabilities 
+
 • It enables developer to write more immutable style of coding
 
+
 Kingfisher 
+
 • Images
 
+
 Quick/Nimble 
+
 • Bdd style testing framewrok
+
 • It allows to write more expressive tests with  / less set up that would require using XCTest framework
+
 • My purpose to include Quick and Nimble was just to demonstrate the difference between BDD style testing and XCUnit testing.
+
 • StringUtilSpec and HttpSchemeProtocolSpec are the only classes that uses Quick and Nimble, rest of tests are implemented with XCTest
 
+
 SwiftyJSON
+
 • For json mapping
+
 • SwiftyJSON is far more practical than Codable in some case, for complex nested json object SwiftyJSON seems to be the only viable option, however both SwiftyJSON and Codable Protocol can be used as well.
 
 OHTTPStubs
+
 • For stubbing your network requests
+
 • It enables complex scenarios to be tested in isolation.
+
 • Useful for testing your service layer.
 
 # Screenshots
