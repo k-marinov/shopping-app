@@ -19,11 +19,11 @@ class ProductDetailViewModel: ViewModel {
     func loadProductDetail() -> Observable<Void> {
         return productId().flatMap { [weak self] productId -> Observable<Void> in
             guard let `self` = self else { return Observable.empty() }
-            return self.productService.findProductDetail(with: try! ProductDetailRequest(productId: productId))
+            return self.productService
+                .findProductDetail(with: try! ProductDetailRequest(productId: productId))
                 .observeOn(MainScheduler.instance)
                 .do(onNext: { [weak self] newProduct in
-                        self?.publishProductDetail.onNext(newProduct)
-                    self?.imageUrlsDataSource.appendOnce(contentsOf: newProduct.imageUrls())
+                    self?.onLoadNextProductDetail(product: newProduct)
                     }, onError: { [weak self] error in
                         self?.onProductDetailCompleted(with: error as! ApiError)
                     }, onCompleted: {  [weak self] in
@@ -49,6 +49,11 @@ class ProductDetailViewModel: ViewModel {
             }
             return Disposables.create()
         }
+    }
+
+    private func onLoadNextProductDetail(product: ProductResource) {
+        publishProductDetail.onNext(product)
+        imageUrlsDataSource.appendOnce(contentsOf: product.imageUrls())
     }
 
     private func onLoadProductDetailStarted() {

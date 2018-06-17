@@ -102,6 +102,9 @@
 		B6085B5420D68D4200BABA4F /* Reactive+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5320D68D4200BABA4F /* Reactive+Extension.swift */; };
 		B6085B5720D6906500BABA4F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5620D6906500BABA4F /* ImageCell.swift */; };
 		B6085B5920D6919B00BABA4F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5820D6919B00BABA4F /* String+Extension.swift */; };
+		B6085B5C20D6AD6000BABA4F /* TableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5A20D6AD5F00BABA4F /* TableViewItem.swift */; };
+		B6085B5D20D6AD6000BABA4F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5B20D6AD5F00BABA4F /* TableViewCell.swift */; };
+		B6085B5F20D6AD6A00BABA4F /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5E20D6AD6A00BABA4F /* TableViewDataSource.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -219,6 +222,9 @@
 		B6085B5320D68D4200BABA4F /* Reactive+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reactive+Extension.swift"; sourceTree = "<group>"; };
 		B6085B5620D6906500BABA4F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		B6085B5820D6919B00BABA4F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B6085B5A20D6AD5F00BABA4F /* TableViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewItem.swift; sourceTree = "<group>"; };
+		B6085B5B20D6AD5F00BABA4F /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B6085B5E20D6AD6A00BABA4F /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +295,8 @@
 		B6085A7120D2FC8400BABA4F /* protocol */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B5B20D6AD5F00BABA4F /* TableViewCell.swift */,
+				B6085B5A20D6AD5F00BABA4F /* TableViewItem.swift */,
 				B6085B2D20D5993F00BABA4F /* CollectionViewCell.swift */,
 				B6085B2C20D5993F00BABA4F /* CollectionViewItem.swift */,
 				B6085B1420D55ABA00BABA4F /* ModelableViewController.swift */,
@@ -547,6 +555,7 @@
 		B6085B2920D5987300BABA4F /* datasource */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B5E20D6AD6A00BABA4F /* TableViewDataSource.swift */,
 				B6085B2A20D5988200BABA4F /* CollectionViewDataSource.swift */,
 			);
 			path = datasource;
@@ -1013,6 +1022,7 @@
 				B6085B4E20D680CB00BABA4F /* ProductDetailRequest.swift in Sources */,
 				B6085ABA20D4FD8C00BABA4F /* ProductsRequest.swift in Sources */,
 				B6085B0920D558DF00BABA4F /* RouterCreatable.swift in Sources */,
+				B6085B5C20D6AD6000BABA4F /* TableViewItem.swift in Sources */,
 				B6085A8620D315D900BABA4F /* PriceResource.swift in Sources */,
 				B6085B2420D5930D00BABA4F /* ProductCellRepresentable.swift in Sources */,
 				B6085AE220D53A2D00BABA4F /* UtilityCreatable.swift in Sources */,
@@ -1038,8 +1048,10 @@
 				B6085AF420D541D100BABA4F /* ComponentCreator.swift in Sources */,
 				B6085ADE20D539CE00BABA4F /* ServiceCreatable.swift in Sources */,
 				B6085AE420D53A3D00BABA4F /* RemoteCreatable.swift in Sources */,
+				B6085B5D20D6AD6000BABA4F /* TableViewCell.swift in Sources */,
 				B6085A9120D44C8000BABA4F /* ProductDetailsResource.swift in Sources */,
 				B6085AD020D5171D00BABA4F /* ApiError.swift in Sources */,
+				B6085B5F20D6AD6A00BABA4F /* TableViewDataSource.swift in Sources */,
 				B6085B1520D55ABA00BABA4F /* ModelableViewController.swift in Sources */,
 				B6085B5720D6906500BABA4F /* ImageCell.swift in Sources */,
 				B6085B0020D549C400BABA4F /* ViewModel.swift in Sources */,
