@@ -25,9 +25,7 @@ Pod Version 1.5.3
 
 ### Quick Start Guide 
 
-git clone
-
-https://github.com/k-marinov/shopping-app.git
+git clone https://github.com/k-marinov/shopping-app.git
 
 pod install  (inside the directory where the Podfile is located)
 
@@ -41,7 +39,7 @@ CMD + R
 
  <img src="https://raw.githubusercontent.com/k-marinov/shopping-app/master/shopping-app-test-coverage.png" width="720">
 
- Product Page 
+ Products Page 
 
  <img src="https://raw.githubusercontent.com/k-marinov/shopping-app/master/screen-1.png" width="720">
 
