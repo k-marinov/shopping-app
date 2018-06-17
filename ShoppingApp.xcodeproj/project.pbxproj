@@ -91,6 +91,10 @@
 		B6085B3220D5AAFE00BABA4F /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B3120D5AAFE00BABA4F /* UICollectionView+Extension.swift */; };
 		B6085B3620D656B900BABA4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B3520D656B900BABA4F /* Color.swift */; };
 		B6085B3920D6609400BABA4F /* ProductsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B3820D6609400BABA4F /* ProductsViewControllerTests.swift */; };
+		B6085B3B20D66E4600BABA4F /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B3A20D66E4600BABA4F /* ProductDetailViewModel.swift */; };
+		B6085B4120D66EA200BABA4F /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B4020D66EA200BABA4F /* ProductDetailRouter.swift */; };
+		B6085B4320D66EBF00BABA4F /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B4220D66EBF00BABA4F /* ProductDetailViewController.swift */; };
+		B6085B4520D66ED900BABA4F /* ProductDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6085B4420D66ED900BABA4F /* ProductDetailViewController.storyboard */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -197,6 +201,10 @@
 		B6085B3120D5AAFE00BABA4F /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		B6085B3520D656B900BABA4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B6085B3820D6609400BABA4F /* ProductsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewControllerTests.swift; sourceTree = "<group>"; };
+		B6085B3A20D66E4600BABA4F /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		B6085B4020D66EA200BABA4F /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
+		B6085B4220D66EBF00BABA4F /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		B6085B4420D66ED900BABA4F /* ProductDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetailViewController.storyboard; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -552,6 +560,41 @@
 			path = viewcontroller;
 			sourceTree = "<group>";
 		};
+		B6085B3C20D66E5900BABA4F /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B3F20D66E7F00BABA4F /* viewmodel */,
+				B6085B3E20D66E7A00BABA4F /* router */,
+				B6085B3D20D66E6F00BABA4F /* viewcontroller */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		B6085B3D20D66E6F00BABA4F /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B4220D66EBF00BABA4F /* ProductDetailViewController.swift */,
+				B6085B4420D66ED900BABA4F /* ProductDetailViewController.storyboard */,
+			);
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		B6085B3E20D66E7A00BABA4F /* router */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B4020D66EA200BABA4F /* ProductDetailRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		B6085B3F20D66E7F00BABA4F /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B3A20D66E4600BABA4F /* ProductDetailViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		B6CC05F520D2F06800254F87 = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +620,7 @@
 			children = (
 				B6085B0520D557B800BABA4F /* App */,
 				B6E0567520D2F9FD00613D05 /* Product */,
+				B6085B3C20D66E5900BABA4F /* ProductDetail */,
 				B6085A6E20D2FC5E00BABA4F /* Shared */,
 				B6E0567420D2F69B00613D05 /* SupportFiles */,
 			);
@@ -780,6 +824,7 @@
 				B6085B2120D58EF600BABA4F /* ProductCell.xib in Resources */,
 				B6CC060920D2F06800254F87 /* Assets.xcassets in Resources */,
 				B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */,
+				B6085B4520D66ED900BABA4F /* ProductDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,6 +957,7 @@
 				B6085A8D20D3189F00BABA4F /* StringUtil.swift in Sources */,
 				B6085ADD20D539CE00BABA4F /* Service.swift in Sources */,
 				B6085B0720D557CC00BABA4F /* ShoppingApp.swift in Sources */,
+				B6085B3B20D66E4600BABA4F /* ProductDetailViewModel.swift in Sources */,
 				B6085ABA20D4FD8C00BABA4F /* ProductsRequest.swift in Sources */,
 				B6085B0920D558DF00BABA4F /* RouterCreatable.swift in Sources */,
 				B6085A8620D315D900BABA4F /* PriceResource.swift in Sources */,
@@ -945,10 +991,12 @@
 				B6085B0D20D5594900BABA4F /* ShoppingAppRouter.swift in Sources */,
 				B6085AE620D53A5D00BABA4F /* ProductRemote.swift in Sources */,
 				B6085AA520D4663400BABA4F /* ProductFeatureResource.swift in Sources */,
+				B6085B4320D66EBF00BABA4F /* ProductDetailViewController.swift in Sources */,
 				B6085AD520D518CC00BABA4F /* HttpStatusCode.swift in Sources */,
 				B6085B3220D5AAFE00BABA4F /* UICollectionView+Extension.swift in Sources */,
 				B6085AC420D5055100BABA4F /* ApiRequestError.swift in Sources */,
 				B6085ABF20D4FFD200BABA4F /* ApiRequest.swift in Sources */,
+				B6085B4120D66EA200BABA4F /* ProductDetailRouter.swift in Sources */,
 				B6085ACC20D5116100BABA4F /* ApiResponse.swift in Sources */,
 				B6085ACA20D510D400BABA4F /* HttpResponse.swift in Sources */,
 				B6085A7020D2FC6900BABA4F /* Resource.swift in Sources */,

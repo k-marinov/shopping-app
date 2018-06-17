@@ -2,19 +2,29 @@ import RxSwift
 
 class ProductsViewModel: ViewModel {
 
+    private let disposeBag: DisposeBag = DisposeBag()
     private(set) var isLoading: PublishSubject<Bool> = PublishSubject<Bool>()
     private(set) var reloadData: PublishSubject<Int> = PublishSubject<Int>()
     private(set) var dataSource: CollectionViewDataSource<ProductResource, ProductCell> =
         CollectionViewDataSource<ProductResource, ProductCell>()
     private(set) var productService: ProductService
+    private(set) var productDetailRouter: ProductDetailRouter!
+    private var componentCreatable: ComponentCreatable
 
     required init(componentCreatable: ComponentCreatable) {
+        self.componentCreatable = componentCreatable
         productService = componentCreatable.create(with: componentCreatable)
+        productDetailRouter = componentCreatable.create()
         subscribe()
     }
 
     func subscribe() {
-
+        dataSource.didSelectItemAtIndexPath()
+            .map { $0 as! ProductResource }
+            .subscribe(onNext: { [weak self] product in
+                guard let `self` = self else { return }
+                self.productDetailRouter.showProductDetail(componentCreatable: self.componentCreatable, product: product)
+            }).disposed(by: disposeBag)
     }
 
     func loadProducts() -> Observable<Void> {
