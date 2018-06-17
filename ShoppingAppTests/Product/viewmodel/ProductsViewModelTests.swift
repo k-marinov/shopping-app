@@ -75,7 +75,7 @@ class ProductsViewModelTests: XCTestCase {
         let products: [ProductResource] = ProductMother.createProducts().products
         let indexPath: IndexPath = IndexPath(row: 0, section: 0)
         viewModel.dataSource.appendOnce(contentsOf: products)
-        viewModel.dataSource.collectionView(collectionView(dataSource: viewModel.dataSource), didSelectItemAt: indexPath)
+        viewModel.delegate.collectionView(collectionView(dataSource: viewModel.dataSource), didSelectItemAt: indexPath)
 
         XCTAssertTrue(creator.mockProductDetailRouter().isShowProductDetailCalled)
     }
@@ -85,7 +85,7 @@ class ProductsViewModelTests: XCTestCase {
         let collectionView = UICollectionView(frame: frame, collectionViewLayout: UICollectionViewFlowLayout.init())
         collectionView.registerCellNib(with: ProductCell.identifier)
         collectionView.dataSource = viewModel.dataSource
-        collectionView.delegate = viewModel.dataSource
+        collectionView.delegate = viewModel.delegate
         collectionView.reloadData()
         return collectionView
     }

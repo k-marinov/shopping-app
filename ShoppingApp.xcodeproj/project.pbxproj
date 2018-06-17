@@ -107,6 +107,7 @@
 		B6085B5F20D6AD6A00BABA4F /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5E20D6AD6A00BABA4F /* TableViewDataSource.swift */; };
 		B6085B6220D6AF0200BABA4F /* ProductFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B6020D6AE0A00BABA4F /* ProductFeatureCell.swift */; };
 		B6085B6420D6C9FF00BABA4F /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B6320D6C9FF00BABA4F /* NSAttributedString+Extension.swift */; };
+		B6085B6620D6CE6C00BABA4F /* CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B6520D6CE6C00BABA4F /* CollectionViewDelegate.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -229,6 +230,7 @@
 		B6085B5E20D6AD6A00BABA4F /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		B6085B6020D6AE0A00BABA4F /* ProductFeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFeatureCell.swift; sourceTree = "<group>"; };
 		B6085B6320D6C9FF00BABA4F /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		B6085B6520D6CE6C00BABA4F /* CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegate.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 			children = (
 				B6085B5E20D6AD6A00BABA4F /* TableViewDataSource.swift */,
 				B6085B2A20D5988200BABA4F /* CollectionViewDataSource.swift */,
+				B6085B6520D6CE6C00BABA4F /* CollectionViewDelegate.swift */,
 			);
 			path = datasource;
 			sourceTree = "<group>";
@@ -1038,6 +1041,7 @@
 				B6085AD820D5395000BABA4F /* HttpClient.swift in Sources */,
 				B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */,
 				B6085B3620D656B900BABA4F /* Color.swift in Sources */,
+				B6085B6620D6CE6C00BABA4F /* CollectionViewDelegate.swift in Sources */,
 				B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */,
 				B6085B2B20D5988200BABA4F /* CollectionViewDataSource.swift in Sources */,
 				B6085B1320D55A9B00BABA4F /* ViewControllerCreatable.swift in Sources */,

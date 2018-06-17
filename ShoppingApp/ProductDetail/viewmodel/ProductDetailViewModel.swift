@@ -9,6 +9,7 @@ class ProductDetailViewModel: ViewModel {
     private(set) var publishProductDetail: PublishSubject<ProductResource> = PublishSubject<ProductResource>()
 
     private(set) var imageUrlsDataSource = CollectionViewDataSource<String, ImageCell>()
+    private(set) var imageUrlsDelegate = CollectionViewDelegate()
     private(set) var featuresDataSource = TableViewDataSource<ProductFeatureResource, ProductFeatureCell>()
     private(set) var productService: ProductService
     private let product: ProductResource
@@ -37,7 +38,7 @@ class ProductDetailViewModel: ViewModel {
     }
 
     func selectedPage() -> Observable<Int> {
-        return imageUrlsDataSource.selectedPage()
+        return imageUrlsDelegate.selectedPage()
     }
 
     private func productId() -> Observable<String> {

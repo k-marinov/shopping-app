@@ -7,6 +7,7 @@ class ProductsViewModel: ViewModel {
     private(set) var reloadData: PublishSubject<Int> = PublishSubject<Int>()
     private(set) var dataSource: CollectionViewDataSource<ProductResource, ProductCell> =
         CollectionViewDataSource<ProductResource, ProductCell>()
+    private(set) var delegate: CollectionViewDelegate = CollectionViewDelegate()
     private(set) var productService: ProductService
     private(set) var productDetailRouter: ProductDetailRouter!
     private var componentCreatable: ComponentCreatable
@@ -19,8 +20,8 @@ class ProductsViewModel: ViewModel {
     }
 
     func subscribe() {
-        dataSource.didSelectItem()
-            .map { $0 as! ProductResource }
+        delegate.didSelectItem()
+            .map { self.findProduct(at: $0) }
             .subscribe(onNext: { [weak self] product in
                 guard let `self` = self else { return }
                 self.productDetailRouter.showProductDetail(componentCreatable: self.componentCreatable, product: product)
@@ -39,6 +40,10 @@ class ProductsViewModel: ViewModel {
                 }, onSubscribe: { [weak self] in
                     self?.onLoadProductsStarted()
             }).map { _ in return () }
+    }
+
+    private func findProduct(at indexPath: IndexPath) -> ProductResource {
+        return dataSource.findItem(at: indexPath) as! ProductResource
     }
 
     private func onLoadProductsStarted() {

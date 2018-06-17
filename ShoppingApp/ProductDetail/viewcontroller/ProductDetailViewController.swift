@@ -52,7 +52,7 @@ class ProductDetailViewController: UIViewController, ModelableViewController {
 
     private func setUpCollectionViewDataSourceAndDelegate() {
         collectionView.dataSource = productDetailViewModel.imageUrlsDataSource
-        collectionView.delegate = productDetailViewModel.imageUrlsDataSource
+        collectionView.delegate = productDetailViewModel.imageUrlsDelegate
     }
 
     private func setUpCollectionViewLayout() {

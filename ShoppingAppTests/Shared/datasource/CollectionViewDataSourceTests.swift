@@ -7,10 +7,11 @@ class CollectionViewDataSourceTests: XCTestCase {
 
     private var cell: ProductCell!
     private var dataSource: CollectionViewDataSource<ProductResource, ProductCell>!
+    private var delegate: CollectionViewDelegate = CollectionViewDelegate()
     private var collectionView: UICollectionView!
     private var products: [ProductResource] = ProductMother.createProducts().products
     let frame: CGRect = CGRect(x: 0, y: 0, width: 1256, height: 2560)
-    var collector: RxCollector<CollectionViewItem>!
+    var collector: RxCollector<IndexPath>!
 
     override func setUp() {
         super.setUp()
@@ -28,12 +29,11 @@ class CollectionViewDataSourceTests: XCTestCase {
 
     func testDidSelectItemAtIndexPath_whenHasGivenIndexPath_returnsCount() {
         let expectedIndexPath: IndexPath = IndexPath(row: 1, section: 0)
-        collector = RxCollector<CollectionViewItem>().collect(from: dataSource.didSelectItem())
-        dataSource.collectionView(collectionView, didSelectItemAt: expectedIndexPath)
+        collector = RxCollector<IndexPath>().collect(from: delegate.didSelectItem())
+        delegate.collectionView(collectionView, didSelectItemAt: expectedIndexPath)
 
         XCTAssertEqual(collector.results.count, 1)
-        let productResource: ProductResource? = collector.results.first as? ProductResource
-        XCTAssertEqual(productResource?.id, "1955287")
+        XCTAssertEqual(collector.results[0], expectedIndexPath)
     }
 
     func testCellForItemAt_whenHasGivenIndexPath_returnsProductCell() {
@@ -59,7 +59,7 @@ class CollectionViewDataSourceTests: XCTestCase {
         collectionView = UICollectionView(frame: frame, collectionViewLayout: UICollectionViewFlowLayout.init())
         collectionView.registerCellNib(with: ProductCell.identifier)
         collectionView.dataSource = dataSource
-        collectionView.delegate = dataSource
+        collectionView.delegate = delegate
         collectionView.reloadData()
     }
 

@@ -45,7 +45,7 @@ class ProductsViewController: UIViewController, ModelableViewController {
 
     private func setUpCollectionViewDataSource() {
         collectionView.dataSource = productsViewModel.dataSource
-        collectionView.delegate = productsViewModel.dataSource
+        collectionView.delegate = productsViewModel.delegate
     }
 
     private func setUpCollectionViewLayout() {
