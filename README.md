@@ -39,11 +39,10 @@ Pod Version 1.5.3
 
 ## App Architecture
 
-MVVM with Routers and layered service architecture. 
-Dependency injection with Component creator for services and routers.
-S.O.L.I.D. principles
+MVVM with Routers and layered service architecture. Dependency injection with Component creator for services and routers.
 
-Main components of MVVM with services architecture are
+Main components of MVVM with Routers and Services architecture are
+
 • Router - Navigation
 
 • ViewController - Views
