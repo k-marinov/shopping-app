@@ -56,6 +56,7 @@ class ProductDetailViewModel: ViewModel {
 
     private func onLoadNextProductDetail(product: ProductResource) {
         publishProductDetail.onNext(product)
+         publishProductDetail.onCompleted()
         imageUrlsDataSource.appendOnce(contentsOf: product.imageUrls())
         featuresDataSource.appendOnce(contentsOf: product.features())
     }

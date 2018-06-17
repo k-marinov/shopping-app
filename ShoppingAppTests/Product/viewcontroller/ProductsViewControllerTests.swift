@@ -14,13 +14,12 @@ class ProductsViewControllerTests: XCTestCase, ViewControllerCreatable {
         viewController = productsViewController()
 
         let expectation = self.expectation(description: "")
-        viewController.productsViewModel.reloadData.subscribe(onNext: { _ in
-            expectation.fulfill()
-        }, onError: { _ in
-            expectation.fulfill()
-        }, onCompleted: {
-            expectation.fulfill()
-        }).disposed(by: disposeBag)
+        viewController.productsViewModel
+            .reloadData.subscribe(onNext: { _ in
+                expectation.fulfill()
+            }, onError: { _ in
+                expectation.fulfill()
+            }).disposed(by: disposeBag)
         _ = viewController.view
         wait(for: [expectation], timeout: Constants.timeout)
 

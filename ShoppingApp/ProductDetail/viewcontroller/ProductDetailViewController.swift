@@ -3,6 +3,8 @@ import RxSwift
 
 class ProductDetailViewController: UIViewController, ModelableViewController {
 
+    private let disposeBag: DisposeBag = DisposeBag()
+
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var specialOfferLabel: UILabel!
     @IBOutlet weak var additionalServicesLabel: UILabel!
@@ -13,8 +15,8 @@ class ProductDetailViewController: UIViewController, ModelableViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    private let disposeBag: DisposeBag = DisposeBag()
-    private lazy var productDetailViewModel: ProductDetailViewModel = {
+
+    private(set) lazy var productDetailViewModel: ProductDetailViewModel = {
         return self.viewModel as! ProductDetailViewModel
     }()
     var viewModel: ViewModel!
@@ -104,6 +106,7 @@ class ProductDetailViewController: UIViewController, ModelableViewController {
             .disposed(by: disposeBag)
 
         productDetailViewModel.selectedPage()
+            .observeOn(MainScheduler.instance)
             .bind { [weak self] pageNumber in
                 self?.pageControl.currentPage = pageNumber
             }.disposed(by: disposeBag)
