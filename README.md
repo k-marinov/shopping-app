@@ -45,14 +45,23 @@ S.O.L.I.D. principles
 
 Main components of MVVM with services architecture are
 • Router - Navigation
+
 • ViewController - Views
+
 • ViewModel - Model for view controller/Views
+
 • ComponentCreator - Dependency injection for view model, services, routers
+
 • Service - Handle business logic, make api request, read write to disk
+
 • Remote  - Makes api request, convert response into different types
+
 • Dao  -  protocol or class for reading, writing from local storage (if needed)
+
 • Request - api request that has the http request,response and resource 
+
 • Response - it holds the success logic for the request
+
 • Resource - equivalent dto of json object
 
 ## Libraries
