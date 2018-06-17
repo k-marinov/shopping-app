@@ -28,4 +28,8 @@ class TableViewDataSource<ITEM: TableViewItem, CELL: TableViewCell>: NSObject, U
         items.append(contentsOf: newItems)
     }
 
+    func count() -> Int {
+        return items.count
+    }
+
 }

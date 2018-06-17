@@ -16,7 +16,7 @@ class ProductsViewControllerTests: XCTestCase, ViewControllerCreatable {
     }
 
     func testViewDidLoad_whenViewControllerIsLoaded_loadsProducts() {
-        creator.mockProductService().isRequestSuccess = true
+        creator.mockProductService().isFindAllProductsRequestSuccess = true
         viewController = productsViewController()
         _ = viewController.view
 
@@ -24,7 +24,7 @@ class ProductsViewControllerTests: XCTestCase, ViewControllerCreatable {
     }
 
     func testViewDidLoad_whenViewControllerIsLoaded_setsUpCollectionViewDataSourceAndDelegate() {
-        creator.mockProductService().isRequestSuccess = true
+        creator.mockProductService().isFindAllProductsRequestSuccess = true
         viewController = productsViewController()
         _ = viewController.view
 

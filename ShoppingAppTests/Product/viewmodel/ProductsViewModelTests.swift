@@ -20,7 +20,7 @@ class ProductsViewModelTests: XCTestCase {
     }
 
     func testLoadProducts_whenProductsAreReturnedWithSuccess_updatesUi() {
-        creator.mockProductService().isRequestSuccess = true
+        creator.mockProductService().isFindAllProductsRequestSuccess = true
         resetCollectors()
 
         let expectation = self.expectation(description: "")
@@ -39,7 +39,7 @@ class ProductsViewModelTests: XCTestCase {
     }
 
     func testLoadProducts_whenProductsAreReturnedWithSuccess_appendsOnceDataSource() {
-        creator.mockProductService().isRequestSuccess = true
+        creator.mockProductService().isFindAllProductsRequestSuccess = true
 
         let expectation = self.expectation(description: "")
         viewModel.loadProducts()
@@ -54,7 +54,7 @@ class ProductsViewModelTests: XCTestCase {
     }
 
     func testLoadProducts_whenProductsNotReturned_updatesUi() {
-        creator.mockProductService().isRequestSuccess = false
+        creator.mockProductService().isFindAllProductsRequestSuccess = false
         resetCollectors()
 
         let expectation = self.expectation(description: "")
@@ -94,7 +94,5 @@ class ProductsViewModelTests: XCTestCase {
         isLoadingCollector.removeAll()
         reloadDataCollector.removeAll()
     }
-
-
 
 }

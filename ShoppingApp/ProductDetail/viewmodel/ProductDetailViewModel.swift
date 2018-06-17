@@ -73,6 +73,7 @@ class ProductDetailViewModel: ViewModel {
     }
 
     private func onProductDetailCompletedWithError() {
+        isLoading.onNext(false)
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 
