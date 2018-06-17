@@ -15,6 +15,7 @@ class ProductDetailViewModelTests: XCTestCase {
     private let product: ProductResource = ProductMother.createProducts().products[0]
     private var collectionView: UICollectionView!
 
+
     override func setUp() {
         super.setUp()
         viewModel = ProductDetailViewModel(componentCreatable: creator, product: product)
@@ -25,7 +26,36 @@ class ProductDetailViewModelTests: XCTestCase {
             .collect(from: viewModel.publishProductDetail.asObservable())
     }
 
-    func testLoadProducts_whenProductDetailRequestIsSuccess_updatesUi() {
+    func testLoadProducts_whenHasEmptyProductId_doesNotMakeRequest() {
+        creator.mockProductService().isFindProductDetailRequestSuccess = true
+        let viewModel = ProductDetailViewModel(
+            componentCreatable: creator,
+            product: ProductMother.productWithEmptyId())
+
+        isLoadingCollector = RxCollector<Bool>().collect(from: viewModel.isLoading.asObservable())
+        reloadImageUrlsCollector = RxCollector<Int>().collect(from: viewModel.reloadImageUrls.asObservable())
+        reloadFeaturesCollector = RxCollector<Void>().collect(from: viewModel.reloadFeatures.asObservable())
+        publishProductDetailCollector = RxCollector<ProductResource>()
+            .collect(from: viewModel.publishProductDetail.asObservable())
+
+        let expectation = self.expectation(description: "")
+        viewModel.loadProductDetail()
+            .subscribe(onNext: {
+                XCTFail()
+            }, onError: { error in
+                XCTFail()
+            }, onCompleted: {
+                expectation.fulfill()
+            }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: Constants.timeout)
+
+        XCTAssertTrue(isLoadingCollector.results.isEmpty)
+        XCTAssertTrue(reloadImageUrlsCollector.results.isEmpty)
+        XCTAssertTrue(reloadFeaturesCollector.results.isEmpty)
+        XCTAssertTrue(publishProductDetailCollector.results.isEmpty)
+    }
+
+    func testLoadProductDetail_whenSuccess_updatesUi() {
         creator.mockProductService().isFindProductDetailRequestSuccess = true
         resetCollectors()
 
@@ -45,7 +75,7 @@ class ProductDetailViewModelTests: XCTestCase {
         XCTAssertEqual(reloadFeaturesCollector.results.count, 1)
     }
 
-    func testLoadProducts_whenProductDetailRequestFails_updatesUi() {
+    func testLoadProductDetail_whenFails_updatesUi() {
         creator.mockProductService().isFindProductDetailRequestSuccess = false
         resetCollectors()
 
@@ -64,7 +94,7 @@ class ProductDetailViewModelTests: XCTestCase {
         XCTAssertTrue(reloadFeaturesCollector.results.isEmpty)
     }
 
-    func testLoadProducts_whenProductDetailRequestIsSuccess_appendsToDataSource() {
+    func testLoadProductDetail_whenSuccess_appendsToDataSource() {
         creator.mockProductService().isFindProductDetailRequestSuccess = true
         resetCollectors()
 
@@ -81,7 +111,7 @@ class ProductDetailViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.featuresDataSource.count(), 4)
     }
 
-    func testLoadProducts_whenProductDetailRequestFails_doesNotAppendToDataSource() {
+    func testLoadProductDetail_whenFails_doesNotAppendToDataSource() {
         creator.mockProductService().isFindProductDetailRequestSuccess = false
         resetCollectors()
 
@@ -98,7 +128,7 @@ class ProductDetailViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.featuresDataSource.count(), 0)
     }
 
-    func testLoadProducts_whenProductDetailRequestIsSuccess_publishesProductDetail() {
+    func testLoadProductDetail_whenSuccess_publishesProductDetail() {
         creator.mockProductService().isFindProductDetailRequestSuccess = true
         resetCollectors()
 
@@ -115,7 +145,7 @@ class ProductDetailViewModelTests: XCTestCase {
         XCTAssertEqual(publishProductDetailCollector.results[0].id, "3215462")
     }
 
-    func testLoadProducts_whenProductDetailRequestFails_doesNotPublishProductDetail() {
+    func testLoadProductDetail_whenFails_doesNotPublishProductDetail() {
         creator.mockProductService().isFindProductDetailRequestSuccess = false
         resetCollectors()
 

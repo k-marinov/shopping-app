@@ -17,6 +17,11 @@ class ProductMother {
         return  "{\"products\": []}".data(using: .utf8)!
     }
 
+    class func productWithEmptyId() -> ProductResource {
+        let data = "{\"productId\":\"\"}".data(using: .utf8)!
+        return ProductResource(json: JSON(data))
+    }
+
     class func emptyProductJson() -> JSON {
         let data: Data = "{}".data(using: .utf8)!
         return JSON(data)
