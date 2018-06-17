@@ -106,6 +106,7 @@
 		B6085B5D20D6AD6000BABA4F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5B20D6AD5F00BABA4F /* TableViewCell.swift */; };
 		B6085B5F20D6AD6A00BABA4F /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5E20D6AD6A00BABA4F /* TableViewDataSource.swift */; };
 		B6085B6220D6AF0200BABA4F /* ProductFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B6020D6AE0A00BABA4F /* ProductFeatureCell.swift */; };
+		B6085B6420D6C9FF00BABA4F /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B6320D6C9FF00BABA4F /* NSAttributedString+Extension.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -227,6 +228,7 @@
 		B6085B5B20D6AD5F00BABA4F /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B6085B5E20D6AD6A00BABA4F /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		B6085B6020D6AE0A00BABA4F /* ProductFeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFeatureCell.swift; sourceTree = "<group>"; };
+		B6085B6320D6C9FF00BABA4F /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 				B6085B5320D68D4200BABA4F /* Reactive+Extension.swift */,
 				B6085B3120D5AAFE00BABA4F /* UICollectionView+Extension.swift */,
 				B6085B5820D6919B00BABA4F /* String+Extension.swift */,
+				B6085B6320D6C9FF00BABA4F /* NSAttributedString+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -592,11 +595,11 @@
 		B6085B3C20D66E5900BABA4F /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B3D20D66E6F00BABA4F /* viewcontroller */,
 				B6085B5520D6903100BABA4F /* view */,
 				B6085B4C20D680B700BABA4F /* request */,
 				B6085B3F20D66E7F00BABA4F /* viewmodel */,
 				B6085B3E20D66E7A00BABA4F /* router */,
-				B6085B3D20D66E6F00BABA4F /* viewcontroller */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -720,10 +723,10 @@
 		B6E0567520D2F9FD00613D05 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				B6085AB820D4FD5C00BABA4F /* viewcontroller */,
 				B6085B0A20D5593100BABA4F /* router */,
 				B6085B0420D5562400BABA4F /* view */,
 				B6085AF520D5460200BABA4F /* viewmodel */,
-				B6085AB820D4FD5C00BABA4F /* viewcontroller */,
 				B6E0567920D2FA1600613D05 /* service */,
 				B6E0567820D2FA1100613D05 /* remote */,
 				B6E0567720D2FA0C00613D05 /* request */,
@@ -1075,6 +1078,7 @@
 				B6085A7020D2FC6900BABA4F /* Resource.swift in Sources */,
 				B6085B1A20D5650300BABA4F /* ProductCell.swift in Sources */,
 				B6085B1120D55A8F00BABA4F /* Navigation.swift in Sources */,
+				B6085B6420D6C9FF00BABA4F /* NSAttributedString+Extension.swift in Sources */,
 				B6085ADA20D539BC00BABA4F /* ComponentCreatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

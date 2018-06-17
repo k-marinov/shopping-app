@@ -53,7 +53,8 @@ class ProductsViewController: UIViewController, ModelableViewController {
     }
 
     private func collectionViewFlowLayout() -> UICollectionViewFlowLayout {
-        let length: CGFloat = UIScreen.main.bounds.size.width/3
+        let column: CGFloat = 3.0
+        let length: CGFloat = UIScreen.main.bounds.size.width / column
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: length, height: length)

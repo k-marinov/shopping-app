@@ -131,7 +131,7 @@ class ProductDetailViewController: UIViewController, ModelableViewController {
     }
 
     private func setUpInformation(product: ProductResource) {
-        informationLabel.text = product.information()
+        informationLabel.attributedText = NSAttributedString(html: product.information())
     }
 
     private func setCodeLabel(product: ProductResource) {
