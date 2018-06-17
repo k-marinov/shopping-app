@@ -28,7 +28,7 @@ class ProductDetailViewModel: ViewModel {
                 .do(onNext: { [weak self] newProduct in
                     self?.onLoadNextProductDetail(product: newProduct)
                     }, onError: { [weak self] error in
-                        self?.onProductDetailCompleted(with: error as! ApiError)
+                        self?.onProductDetailCompletedWithError()
                     }, onCompleted: {  [weak self] in
                         self?.onLoadProductDetailCompleted()
                     }, onSubscribe: { [weak self] in
@@ -72,7 +72,7 @@ class ProductDetailViewModel: ViewModel {
         reloadFeatures.onNext(())
     }
 
-    private func onProductDetailCompleted(with error: ApiError) {
+    private func onProductDetailCompletedWithError() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 

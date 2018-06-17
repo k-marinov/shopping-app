@@ -5,8 +5,7 @@ class ProductsViewModel: ViewModel {
     private let disposeBag: DisposeBag = DisposeBag()
     private(set) var isLoading: PublishSubject<Bool> = PublishSubject<Bool>()
     private(set) var reloadData: PublishSubject<Int> = PublishSubject<Int>()
-    private(set) var dataSource: CollectionViewDataSource<ProductResource, ProductCell> =
-        CollectionViewDataSource<ProductResource, ProductCell>()
+    private(set) var dataSource = CollectionViewDataSource<ProductResource, ProductCell>()
     private(set) var delegate: CollectionViewDelegate = CollectionViewDelegate()
     private(set) var productService: ProductService
     private(set) var productDetailRouter: ProductDetailRouter!
@@ -34,7 +33,7 @@ class ProductsViewModel: ViewModel {
             .do(onNext: { [weak self] newProducts in
                 self?.dataSource.appendOnce(contentsOf: newProducts)
                 }, onError: { [weak self] error in
-                    self?.onLoadProductsCompleted(with: error as! ApiError)
+                    self?.onLoadProductsCompletedWithError()
                 }, onCompleted: {  [weak self] in
                     self?.onLoadProductsCompleted()
                 }, onSubscribe: { [weak self] in
@@ -57,7 +56,7 @@ class ProductsViewModel: ViewModel {
         reloadData.onNext(dataSource.count())
     }
 
-    private func onLoadProductsCompleted(with error: ApiError) {
+    private func onLoadProductsCompletedWithError() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         isLoading.onNext(false)
     }
