@@ -18,7 +18,7 @@ Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)
 
 iOS 10.0
 
-### Cocoapods 
+### Deployment Target
 
 Pod Version 1.5.3
 
