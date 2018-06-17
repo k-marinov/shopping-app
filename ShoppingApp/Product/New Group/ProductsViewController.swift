@@ -4,6 +4,8 @@ import RxSwift
 class ProductsViewController: UIViewController, ModelableViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+
     private let disposeBag: DisposeBag = DisposeBag()
     private lazy var productsViewModel: ProductsViewModel = {
         return self.viewModel as! ProductsViewModel
@@ -56,6 +58,19 @@ class ProductsViewController: UIViewController, ModelableViewController {
                 self?.collectionView.reloadData()
                 self?.setUpNavigationBarTitle(count)
             }).disposed(by: disposeBag)
+
+        productsViewModel.isLoading
+            .subscribe(onNext: { [weak self] isLoading in
+                self?.setActivityIndicatorState(isLoading)
+            }).disposed(by: disposeBag)
+    }
+
+    private func setActivityIndicatorState(_ isLoading: Bool) {
+        if isLoading {
+            activityIndicatorView.startAnimating()
+        } else {
+            activityIndicatorView.stopAnimating()
+        }
     }
 
     private func setUpNavigationBarTitle(_ count: Int) {

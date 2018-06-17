@@ -29,17 +29,24 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-Pn-sVw">
+                                <rect key="frame" x="365.5" y="503.5" width="37" height="37"/>
+                                <color key="color" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qjB-1z-7ih" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="9cI-Rc-oia"/>
                             <constraint firstItem="qjB-1z-7ih" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9oF-j6-fi0"/>
+                            <constraint firstItem="Wte-Pn-sVw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FfH-Gu-pgy"/>
                             <constraint firstItem="qjB-1z-7ih" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ad2-q6-UMk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qjB-1z-7ih" secondAttribute="bottom" id="cKr-eO-syS"/>
+                            <constraint firstItem="Wte-Pn-sVw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lxP-HP-dVx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="Wte-Pn-sVw" id="htX-wY-JAn"/>
                         <outlet property="collectionView" destination="qjB-1z-7ih" id="QsB-TB-3pG"/>
                     </connections>
                 </viewController>
