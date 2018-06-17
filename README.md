@@ -39,7 +39,7 @@ Pod Version 1.5.3
 
 ## App Architecture
 
-MVVM with Routers and layered service architecture. Dependency injection with Component creator for services and routers.
+**MVVM** with Routers and layered service architecture. Dependency injection with Component creator for services and routers.
 
 Main components of MVVM with Routers and Services architecture are
 
@@ -66,7 +66,7 @@ Main components of MVVM with Routers and Services architecture are
 ## Libraries
 
 
-RxSwift / RxCocoa
+**RxSwift / RxCocoa**
 
 • Concurrency 
 
@@ -79,12 +79,12 @@ RxSwift / RxCocoa
 • It enables developer to write more immutable style of coding
 
 
-Kingfisher 
+**Kingfisher** 
 
 • Images
 
 
-Quick/Nimble 
+**Quick/Nimble**
 
 • Bdd style testing framewrok
 
@@ -95,13 +95,13 @@ Quick/Nimble
 • StringUtilSpec and HttpSchemeProtocolSpec are the only classes that uses Quick and Nimble, rest of tests are implemented with XCTest
 
 
-SwiftyJSON
+**SwiftyJSON**
 
 • For json mapping
 
 • SwiftyJSON is far more practical than Codable in some case, for complex nested json object SwiftyJSON seems to be the only viable option, however both SwiftyJSON and Codable Protocol can be used as well.
 
-OHTTPStubs
+**OHTTPStubs**
 
 • For stubbing your network requests
 
