@@ -5,6 +5,7 @@ class ProductDetailViewModel: ViewModel {
     private let disposeBag: DisposeBag = DisposeBag()
     private(set) var isLoading: PublishSubject<Bool> = PublishSubject<Bool>()
     private(set) var reloadData: PublishSubject<Int> = PublishSubject<Int>()
+    private(set) var publishProductDetail: PublishSubject<ProductResource> = PublishSubject<ProductResource>()
     private(set) var dataSource: CollectionViewDataSource<ProductResource, ProductCell> =
         CollectionViewDataSource<ProductResource, ProductCell>()
     private(set) var productService: ProductService
@@ -21,7 +22,7 @@ class ProductDetailViewModel: ViewModel {
             return self.productService.findProductDetail(with: try! ProductDetailRequest(productId: productId))
                 .observeOn(MainScheduler.instance)
                 .do(onNext: { [weak self] newProduct in
-                    //TODO: LOAD THE DATA
+                        self?.publishProductDetail.onNext(newProduct)
                     }, onError: { [weak self] error in
                         self?.onProductDetailCompleted(with: error as! ApiError)
                     }, onCompleted: {  [weak self] in

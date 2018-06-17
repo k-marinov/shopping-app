@@ -59,18 +59,10 @@ class ProductsViewController: UIViewController, ModelableViewController {
                 self?.setUpNavigationBarTitle(count)
             }).disposed(by: disposeBag)
 
-        productsViewModel.isLoading
-            .subscribe(onNext: { [weak self] isLoading in
-                self?.setActivityIndicatorState(isLoading)
-            }).disposed(by: disposeBag)
-    }
-
-    private func setActivityIndicatorState(_ isLoading: Bool) {
-        if isLoading {
-            activityIndicatorView.startAnimating()
-        } else {
-            activityIndicatorView.stopAnimating()
-        }
+         productsViewModel.isLoading
+            .asObservable()
+            .bind(to: activityIndicatorView.rx.isLoading)
+            .disposed(by: disposeBag)
     }
 
     private func setUpNavigationBarTitle(_ count: Int) {

@@ -17,9 +17,22 @@
                     <view key="view" contentMode="scaleToFill" id="EKQ-8k-kpD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0h0-bW-LZv">
+                                <rect key="frame" x="169" y="325" width="37" height="37"/>
+                                <color key="color" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0h0-bW-LZv" firstAttribute="centerX" secondItem="paj-id-jkV" secondAttribute="centerX" id="hsh-vk-4Ua"/>
+                            <constraint firstItem="0h0-bW-LZv" firstAttribute="centerY" secondItem="paj-id-jkV" secondAttribute="centerY" id="uXr-1q-GlH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="paj-id-jkV"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="0h0-bW-LZv" id="hbc-Ry-yEK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihv-j6-6dn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
