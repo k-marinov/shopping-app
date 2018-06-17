@@ -25,11 +25,11 @@ Pod Version 1.5.3
 
 ### Quick Start Guide 
 
-*git clone https://github.com/k-marinov/shopping-app.git*
+```git clone https://github.com/k-marinov/shopping-app.git```
 
-*pod install  (inside the directory where the Podfile is located)*
+```pod install  (inside the directory where the Podfile is located)```
 
-*CMD + R*
+```CMD + R```
 
 
 ## App Architecture
