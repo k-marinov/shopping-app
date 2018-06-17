@@ -100,6 +100,8 @@
 		B6085B5020D681D800BABA4F /* ClassError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B4F20D681D800BABA4F /* ClassError.swift */; };
 		B6085B5220D6839400BABA4F /* ProductDetailHttpMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5120D6839400BABA4F /* ProductDetailHttpMocker.swift */; };
 		B6085B5420D68D4200BABA4F /* Reactive+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5320D68D4200BABA4F /* Reactive+Extension.swift */; };
+		B6085B5720D6906500BABA4F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5620D6906500BABA4F /* ImageCell.swift */; };
+		B6085B5920D6919B00BABA4F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5820D6919B00BABA4F /* String+Extension.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -215,6 +217,8 @@
 		B6085B4F20D681D800BABA4F /* ClassError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassError.swift; sourceTree = "<group>"; };
 		B6085B5120D6839400BABA4F /* ProductDetailHttpMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHttpMocker.swift; sourceTree = "<group>"; };
 		B6085B5320D68D4200BABA4F /* Reactive+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reactive+Extension.swift"; sourceTree = "<group>"; };
+		B6085B5620D6906500BABA4F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		B6085B5820D6919B00BABA4F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -553,6 +557,7 @@
 			children = (
 				B6085B5320D68D4200BABA4F /* Reactive+Extension.swift */,
 				B6085B3120D5AAFE00BABA4F /* UICollectionView+Extension.swift */,
+				B6085B5820D6919B00BABA4F /* String+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -576,6 +581,7 @@
 		B6085B3C20D66E5900BABA4F /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B5520D6903100BABA4F /* view */,
 				B6085B4C20D680B700BABA4F /* request */,
 				B6085B3F20D66E7F00BABA4F /* viewmodel */,
 				B6085B3E20D66E7A00BABA4F /* router */,
@@ -631,6 +637,14 @@
 				B6085B4D20D680CB00BABA4F /* ProductDetailRequest.swift */,
 			);
 			path = request;
+			sourceTree = "<group>";
+		};
+		B6085B5520D6903100BABA4F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B5620D6906500BABA4F /* ImageCell.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		B6CC05F520D2F06800254F87 = {
@@ -1027,6 +1041,7 @@
 				B6085A9120D44C8000BABA4F /* ProductDetailsResource.swift in Sources */,
 				B6085AD020D5171D00BABA4F /* ApiError.swift in Sources */,
 				B6085B1520D55ABA00BABA4F /* ModelableViewController.swift in Sources */,
+				B6085B5720D6906500BABA4F /* ImageCell.swift in Sources */,
 				B6085B0020D549C400BABA4F /* ViewModel.swift in Sources */,
 				B6085B0D20D5594900BABA4F /* ShoppingAppRouter.swift in Sources */,
 				B6085AE620D53A5D00BABA4F /* ProductRemote.swift in Sources */,
@@ -1037,6 +1052,7 @@
 				B6085B3220D5AAFE00BABA4F /* UICollectionView+Extension.swift in Sources */,
 				B6085AC420D5055100BABA4F /* ApiRequestError.swift in Sources */,
 				B6085ABF20D4FFD200BABA4F /* ApiRequest.swift in Sources */,
+				B6085B5920D6919B00BABA4F /* String+Extension.swift in Sources */,
 				B6085B4120D66EA200BABA4F /* ProductDetailRouter.swift in Sources */,
 				B6085ACC20D5116100BABA4F /* ApiResponse.swift in Sources */,
 				B6085ACA20D510D400BABA4F /* HttpResponse.swift in Sources */,

@@ -4,10 +4,10 @@ class ProductDetailViewModel: ViewModel {
 
     private let disposeBag: DisposeBag = DisposeBag()
     private(set) var isLoading: PublishSubject<Bool> = PublishSubject<Bool>()
-    private(set) var reloadData: PublishSubject<Int> = PublishSubject<Int>()
+    private(set) var reloadImageUrls: PublishSubject<Int> = PublishSubject<Int>()
     private(set) var publishProductDetail: PublishSubject<ProductResource> = PublishSubject<ProductResource>()
-    private(set) var dataSource: CollectionViewDataSource<ProductResource, ProductCell> =
-        CollectionViewDataSource<ProductResource, ProductCell>()
+    private(set) var imageUrlsDataSource: CollectionViewDataSource<String, ImageCell> =
+        CollectionViewDataSource<String, ImageCell>()
     private(set) var productService: ProductService
     private let product: ProductResource
 
@@ -23,6 +23,7 @@ class ProductDetailViewModel: ViewModel {
                 .observeOn(MainScheduler.instance)
                 .do(onNext: { [weak self] newProduct in
                         self?.publishProductDetail.onNext(newProduct)
+                    self?.imageUrlsDataSource.appendOnce(contentsOf: newProduct.imageUrls())
                     }, onError: { [weak self] error in
                         self?.onProductDetailCompleted(with: error as! ApiError)
                     }, onCompleted: {  [weak self] in
@@ -31,6 +32,10 @@ class ProductDetailViewModel: ViewModel {
                         self?.onLoadProductDetailStarted()
                 }).map { _ in return () }
         }
+    }
+
+    func selectedPage() -> Observable<Int> {
+        return imageUrlsDataSource.selectedPage()
     }
 
     private func productId() -> Observable<String> {
@@ -54,7 +59,7 @@ class ProductDetailViewModel: ViewModel {
     private func onLoadProductDetailCompleted() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         isLoading.onNext(false)
-        reloadData.onNext(dataSource.count())
+        reloadImageUrls.onNext(imageUrlsDataSource.count())
     }
 
     private func onProductDetailCompleted(with error: ApiError) {
