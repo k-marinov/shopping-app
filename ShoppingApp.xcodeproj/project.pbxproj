@@ -98,6 +98,7 @@
 		B6085B4B20D6809600BABA4F /* ProductDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B4A20D6809600BABA4F /* ProductDetailRequest.swift */; };
 		B6085B4E20D680CB00BABA4F /* ProductDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B4D20D680CB00BABA4F /* ProductDetailRequest.swift */; };
 		B6085B5020D681D800BABA4F /* ClassError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B4F20D681D800BABA4F /* ClassError.swift */; };
+		B6085B5220D6839400BABA4F /* ProductDetailHttpMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B5120D6839400BABA4F /* ProductDetailHttpMocker.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -211,6 +212,7 @@
 		B6085B4A20D6809600BABA4F /* ProductDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRequest.swift; sourceTree = "<group>"; };
 		B6085B4D20D680CB00BABA4F /* ProductDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRequest.swift; sourceTree = "<group>"; };
 		B6085B4F20D681D800BABA4F /* ClassError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassError.swift; sourceTree = "<group>"; };
+		B6085B5120D6839400BABA4F /* ProductDetailHttpMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHttpMocker.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 			children = (
 				B6085AEA20D53C4300BABA4F /* ProductsHttpMocker.swift */,
 				B6085AEC20D53E8300BABA4F /* Constants.swift */,
+				B6085B5120D6839400BABA4F /* ProductDetailHttpMocker.swift */,
 			);
 			path = HttpMocks;
 			sourceTree = "<group>";
@@ -1055,6 +1058,7 @@
 				B6085A8820D3183400BABA4F /* PriceResourceTests.swift in Sources */,
 				B6E0567E20D2FAA300613D05 /* ProductsResourceTests.swift in Sources */,
 				B6085ACE20D512B100BABA4F /* HttpResponseMother.swift in Sources */,
+				B6085B5220D6839400BABA4F /* ProductDetailHttpMocker.swift in Sources */,
 				B6085A8A20D3184200BABA4F /* PriceMother.swift in Sources */,
 				B6085B4720D6740C00BABA4F /* MockProductDetailRouter.swift in Sources */,
 				B6085A7F20D305FC00BABA4F /* ProductMother.swift in Sources */,

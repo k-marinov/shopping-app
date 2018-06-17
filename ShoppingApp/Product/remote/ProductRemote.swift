@@ -13,4 +13,9 @@ class ProductRemote {
             .map { ($0.resource as! ProductsResource).products }
     }
 
+    func findProductDetail(with request: ProductDetailRequest) -> Observable<ProductResource> {
+        return apiClient.request(with: request)
+            .map { $0.resource as! ProductResource }
+    }
+
 }

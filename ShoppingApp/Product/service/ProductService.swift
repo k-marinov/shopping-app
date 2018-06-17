@@ -11,4 +11,9 @@ class ProductService: Service {
     func findAllProducts(with request: ProductsRequest) -> Observable<[ProductResource]> {
         return productRemote.findAllProducts(with:request)
     }
+
+    func findProductDetail(with request: ProductDetailRequest) -> Observable<ProductResource> {
+        return productRemote.findProductDetail(with: request)
+    }
+
 }
