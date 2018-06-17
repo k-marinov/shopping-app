@@ -34,7 +34,7 @@ Pod Version 1.5.3
 
 ## TEST COVERAGE
 
-89% percent of the application is tested, all the resource, services, view models and view controller, some views are unit tested, There are also http stub tests by using OHTTPStubs library which also enable classes to be tested in integration. Below the service level api requests are tested with http stubbing. At View model level mock service responses are used.
+89% of the classes are tested, including all the resources, services, view models and view controllers, some views are unit tested, There are also http stub tests by using OHTTPStubs library which also enable classes to be tested in integration. Below the service level api requests are tested with http stubbing. At View model level mock service responses are used.
 
 
 ## App Architecture
