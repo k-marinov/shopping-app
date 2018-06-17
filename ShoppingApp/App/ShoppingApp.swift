@@ -11,7 +11,6 @@ class ShoppingApp {
     }
 
     func setUp(with window: UIWindow) -> UIWindow {
-        UIApplication.shared.statusBarStyle = .lightContent
         return shoppingAppRouter.setRootViewController(to: window, componentCreatable: componentCreatable)
     }
 
