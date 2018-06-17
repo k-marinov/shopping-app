@@ -10,6 +10,7 @@ class ProductsViewModelTests: XCTestCase {
     var viewModel: ProductsViewModel!
     var isLoadingCollector: RxCollector<Bool>!
     var reloadDataCollector: RxCollector<Int>!
+    var collectionView: UICollectionView!
 
     override func setUp() {
         super.setUp()
@@ -70,9 +71,30 @@ class ProductsViewModelTests: XCTestCase {
         XCTAssertEqual(reloadDataCollector.results.count, 0)
     }
 
+    func testDidSelectItem_whenHasProductAtGivenIndexPath_navigatesToProductDetail() {
+        let products: [ProductResource] = ProductMother.createProducts().products
+        let indexPath: IndexPath = IndexPath(row: 0, section: 0)
+        viewModel.dataSource.appendOnce(contentsOf: products)
+        viewModel.dataSource.collectionView(collectionView(dataSource: viewModel.dataSource), didSelectItemAt: indexPath)
+
+        XCTAssertTrue(creator.mockProductDetailRouter().isShowProductDetailCalled)
+    }
+
+    private func collectionView(dataSource: CollectionViewDataSource<ProductResource, ProductCell>) -> UICollectionView {
+        let frame: CGRect = CGRect(x: 0, y: 0, width: 1256, height: 2560)
+        let collectionView = UICollectionView(frame: frame, collectionViewLayout: UICollectionViewFlowLayout.init())
+        collectionView.registerCellNib(with: ProductCell.identifier)
+        collectionView.dataSource = viewModel.dataSource
+        collectionView.delegate = viewModel.dataSource
+        collectionView.reloadData()
+        return collectionView
+    }
+
     private func resetCollectors() {
         isLoadingCollector.removeAll()
         reloadDataCollector.removeAll()
     }
+
+
 
 }

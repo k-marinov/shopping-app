@@ -19,7 +19,7 @@ class ProductsViewModel: ViewModel {
     }
 
     func subscribe() {
-        dataSource.didSelectItemAtIndexPath()
+        dataSource.didSelectItem()
             .map { $0 as! ProductResource }
             .subscribe(onNext: { [weak self] product in
                 guard let `self` = self else { return }

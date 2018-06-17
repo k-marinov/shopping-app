@@ -95,6 +95,7 @@
 		B6085B4120D66EA200BABA4F /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B4020D66EA200BABA4F /* ProductDetailRouter.swift */; };
 		B6085B4320D66EBF00BABA4F /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B4220D66EBF00BABA4F /* ProductDetailViewController.swift */; };
 		B6085B4520D66ED900BABA4F /* ProductDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6085B4420D66ED900BABA4F /* ProductDetailViewController.storyboard */; };
+		B6085B4720D6740C00BABA4F /* MockProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B4620D6740C00BABA4F /* MockProductDetailRouter.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -205,6 +206,7 @@
 		B6085B4020D66EA200BABA4F /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 		B6085B4220D66EBF00BABA4F /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		B6085B4420D66ED900BABA4F /* ProductDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetailViewController.storyboard; sourceTree = "<group>"; };
+		B6085B4620D6740C00BABA4F /* MockProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductDetailRouter.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				B6085AC520D5064800BABA4F /* MockProductsRequest.swift */,
 				B6085AFB20D5482400BABA4F /* MockComponentCreator.swift */,
 				B6085AFD20D5486600BABA4F /* MockProductService.swift */,
+				B6085B4620D6740C00BABA4F /* MockProductDetailRouter.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1022,6 +1025,7 @@
 				B6E0567E20D2FAA300613D05 /* ProductsResourceTests.swift in Sources */,
 				B6085ACE20D512B100BABA4F /* HttpResponseMother.swift in Sources */,
 				B6085A8A20D3184200BABA4F /* PriceMother.swift in Sources */,
+				B6085B4720D6740C00BABA4F /* MockProductDetailRouter.swift in Sources */,
 				B6085A7F20D305FC00BABA4F /* ProductMother.swift in Sources */,
 				B6085AF220D5408400BABA4F /* ProductServiceTests.swift in Sources */,
 				B6085AC620D5064800BABA4F /* MockProductsRequest.swift in Sources */,

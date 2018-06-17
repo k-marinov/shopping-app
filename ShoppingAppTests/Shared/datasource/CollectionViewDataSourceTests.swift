@@ -10,18 +10,17 @@ class CollectionViewDataSourceTests: XCTestCase {
     private var collectionView: UICollectionView!
     private var products: [ProductResource] = ProductMother.createProducts().products
     let frame: CGRect = CGRect(x: 0, y: 0, width: 1256, height: 2560)
-    var collector: RxCollector<IndexPath>!
+    var collector: RxCollector<CollectionViewItem>!
 
     override func setUp() {
         super.setUp()
-        dataSource = CollectionViewDataSource<ProductResource, ProductCell>()
-        dataSource.appendOnce(contentsOf: products)
         setUpCollectionView()
     }
 
     func testAppendOnce_whenNewItemsAreAddedTwice_appendsOnce() {
         dataSource.appendOnce(contentsOf: products)
         dataSource.appendOnce(contentsOf: products)
+        collectionView.reloadData()
         let count = dataSource.collectionView(collectionView, numberOfItemsInSection: 0)
 
         XCTAssertEqual(count, 3)
@@ -29,11 +28,12 @@ class CollectionViewDataSourceTests: XCTestCase {
 
     func testDidSelectItemAtIndexPath_whenHasGivenIndexPath_returnsCount() {
         let expectedIndexPath: IndexPath = IndexPath(row: 1, section: 0)
-        collector = RxCollector<IndexPath>().collect(from: dataSource.didSelectItemAtIndexPath())
+        collector = RxCollector<CollectionViewItem>().collect(from: dataSource.didSelectItem())
         dataSource.collectionView(collectionView, didSelectItemAt: expectedIndexPath)
 
         XCTAssertEqual(collector.results.count, 1)
-        XCTAssertEqual(collector.results[0], expectedIndexPath)
+        let productResource: ProductResource? = collector.results.first as? ProductResource
+        XCTAssertEqual(productResource?.id, 1955287)
     }
 
     func testCellForItemAt_whenHasGivenIndexPath_returnsProductCell() {
@@ -53,10 +53,14 @@ class CollectionViewDataSourceTests: XCTestCase {
     }
 
     private func setUpCollectionView() {
+        dataSource = CollectionViewDataSource<ProductResource, ProductCell>()
+        dataSource.appendOnce(contentsOf: products)
+        
         collectionView = UICollectionView(frame: frame, collectionViewLayout: UICollectionViewFlowLayout.init())
         collectionView.registerCellNib(with: ProductCell.identifier)
         collectionView.dataSource = dataSource
         collectionView.delegate = dataSource
+        collectionView.reloadData()
     }
 
 }

@@ -5,7 +5,7 @@ class CollectionViewDataSource<ITEM: CollectionViewItem, CELL: CollectionViewCel
 UICollectionViewDelegate {
 
     private var items: [CollectionViewItem] = [CollectionViewItem]()
-    private let didSelectItem: PublishSubject<CollectionViewItem> = PublishSubject<CollectionViewItem>()
+    private let didSelectItemAt: PublishSubject<CollectionViewItem> = PublishSubject<CollectionViewItem>()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
@@ -22,7 +22,7 @@ UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectItem.onNext(items[indexPath.row])
+        didSelectItemAt.onNext(items[indexPath.row])
     }
 
     func appendOnce(contentsOf newItems: [CollectionViewItem]) {
@@ -30,8 +30,8 @@ UICollectionViewDelegate {
         items.append(contentsOf: newItems)
     }
 
-    func didSelectItemAtIndexPath() -> Observable<CollectionViewItem> {
-        return didSelectItem.asObservable()
+    func didSelectItem() -> Observable<CollectionViewItem> {
+        return didSelectItemAt.asObservable()
     }
 
     func count() -> Int {
