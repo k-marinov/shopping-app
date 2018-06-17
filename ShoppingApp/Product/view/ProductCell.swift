@@ -11,6 +11,7 @@ class ProductCell: UICollectionViewCell, CollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUpCellBorderStyle()
     }
 
     override init(frame: CGRect) {
@@ -31,6 +32,11 @@ class ProductCell: UICollectionViewCell, CollectionViewCell {
             .map { imageUrl in
                 imageView.kf.setImage(with: imageUrl)
         }
+    }
+
+    private func setUpCellBorderStyle() {
+        contentView.layer.borderColor = Color.lightGray.cgColor
+        contentView.layer.borderWidth = 0.5
     }
 
     private func resetContent() {

@@ -26,8 +26,27 @@ class ProductsViewController: UIViewController, ModelableViewController {
 
     private func setUpCollectionView() {
         collectionView.registerCellNib(with: ProductCell.identifier)
+        setUpCollectionViewDataSource()
+        setUpCollectionViewLayout()
+    }
+
+    private func setUpCollectionViewDataSource() {
         collectionView.dataSource = productsViewModel.dataSource
         collectionView.delegate = productsViewModel.dataSource
+    }
+
+    private func setUpCollectionViewLayout() {
+        collectionView.collectionViewLayout = collectionViewFlowLayout()
+    }
+
+    private func collectionViewFlowLayout() -> UICollectionViewFlowLayout {
+        let length: CGFloat = UIScreen.main.bounds.size.width/3
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: length, height: length)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        return layout
     }
 
     private func subscribe() {

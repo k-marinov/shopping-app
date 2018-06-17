@@ -89,6 +89,7 @@
 		B6085B2E20D5993F00BABA4F /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B2C20D5993F00BABA4F /* CollectionViewItem.swift */; };
 		B6085B2F20D5993F00BABA4F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B2D20D5993F00BABA4F /* CollectionViewCell.swift */; };
 		B6085B3220D5AAFE00BABA4F /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B3120D5AAFE00BABA4F /* UICollectionView+Extension.swift */; };
+		B6085B3620D656B900BABA4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6085B3520D656B900BABA4F /* Color.swift */; };
 		B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060120D2F06800254F87 /* AppDelegate.swift */; };
 		B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC060320D2F06800254F87 /* ProductsViewController.swift */; };
 		B6CC060720D2F06800254F87 /* ProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC060520D2F06800254F87 /* ProductsViewController.storyboard */; };
@@ -193,6 +194,7 @@
 		B6085B2C20D5993F00BABA4F /* CollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
 		B6085B2D20D5993F00BABA4F /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B6085B3120D5AAFE00BABA4F /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		B6085B3520D656B900BABA4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B6CC05FE20D2F06800254F87 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CC060120D2F06800254F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CC060320D2F06800254F87 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 		B6085AC020D5012F00BABA4F /* model */ = {
 			isa = PBXGroup;
 			children = (
+				B6085B3420D656AC00BABA4F /* constants */,
 				B6085AD620D52C6500BABA4F /* error */,
 				B6085AD420D518CC00BABA4F /* HttpStatusCode.swift */,
 				B6085AC120D5014200BABA4F /* HttpMethod.swift */,
@@ -529,6 +532,14 @@
 				B6085B3120D5AAFE00BABA4F /* UICollectionView+Extension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		B6085B3420D656AC00BABA4F /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				B6085B3520D656B900BABA4F /* Color.swift */,
+			);
+			path = constants;
 			sourceTree = "<group>";
 		};
 		B6CC05F520D2F06800254F87 = {
@@ -900,6 +911,7 @@
 				B6085B0F20D55A1600BABA4F /* ProductsRouter.swift in Sources */,
 				B6085AD820D5395000BABA4F /* HttpClient.swift in Sources */,
 				B6CC060420D2F06800254F87 /* ProductsViewController.swift in Sources */,
+				B6085B3620D656B900BABA4F /* Color.swift in Sources */,
 				B6CC060220D2F06800254F87 /* AppDelegate.swift in Sources */,
 				B6085B2B20D5988200BABA4F /* CollectionViewDataSource.swift in Sources */,
 				B6085B1320D55A9B00BABA4F /* ViewControllerCreatable.swift in Sources */,
