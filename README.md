@@ -29,9 +29,9 @@ Pod Version 1.5.3
 
 ```cd shopping-app```
 
-pod install (In the shopping-app directory where the Podfile is located, Once pod install is completed, It will generate ShoppingApp.xcworkspace file)
+```pod install (In the shopping-app directory where the Podfile is located, Once pod install is completed, It will generate ShoppingApp.xcworkspace file)```
 
-open ShoppingApp.xcworkspace
+```open ShoppingApp.xcworkspace```
 
 ```CMD + R```
 
