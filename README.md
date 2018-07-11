@@ -27,7 +27,11 @@ Pod Version 1.5.3
 
 ```git clone https://github.com/k-marinov/shopping-app.git```
 
-```pod install  (inside the directory where the Podfile is located)```
+```cd shopping-app```
+
+pod install (In the shopping-app directory where the Podfile is located, Once pod install is completed, It will generate ShoppingApp.xcworkspace file)
+
+open ShoppingApp.xcworkspace
 
 ```CMD + R```
 
